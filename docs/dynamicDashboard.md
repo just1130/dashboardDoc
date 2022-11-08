@@ -124,11 +124,12 @@ Diese Methode prüft, ob eine E-mail Adresse schon im System existiert.
 Enthält alle Schemas Definitionen für die MongoDB.
 ### Role.js  
 Beschreibt das Schema der Rollen für die MongoDB.
-
-
-### Sites.js
-### Table.js
-### User.js
+### Sites.js  
+Beschreibt das Schema der Seiten für die MongoDB.
+### Table.js  
+Beschreibt das Schema der Tabellen für die MongoDB.
+### User.js   
+Beschreibt das Schema der Nutzer für die MongoDB.
 
 ## Router  
 
