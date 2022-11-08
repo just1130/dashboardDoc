@@ -1,2 +1,10 @@
-site_name: My Docs
+site_name: Dashboard Bauindustrie
+site_description: Dokumentation für das Projektseminar
+repo_url: https://github.com/just1130/dashboardDoc
 theme: readthedocs
+docs_dir: 'docs'
+pages:
+- Home: 
+    - 'Introduction': 'index.md'
+- Workflow:
+    - 'Test': 'test.md'
