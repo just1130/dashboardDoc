@@ -1,11 +1,10 @@
 # Dynamic Dashboard
-In diesem NodeJS Backend werden die Daten für das Frontend bereitgestellt, die Nutzer verwaltet und authentifiziert.
-Im Folgenden werden die einzelnen Unter-Ordner, Skripte und Dateien aus dem Ordner Backend vorgestellt. Authentifizierung datenberietsstellung für Frontend USer Admin
+Dieses NodeJS Backend bietet über REST Schnittstellen Funktionen an, um Nutzer zu verwalten, Login-Prozesse zu authentifizieren. Desweiteren findet hier die Dateninteraktion mit dem Frontend statt. Im Folgenden werden die einzelnen Unter-Ordner, Module und Dateien in diesem Zusammenhang vorgestellt. 
 
 
 ## Helper
 ### auth.js
-Dieses Modul verwaltet die Authentifizierung des Login und die Validierung der verschiedenen User.
+Dieses Modul verwaltet die Authentifizierung des Logins und die Validierung der verschiedenen User.
 
 ---
 #### `signup(req,res)`
