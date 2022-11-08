@@ -1,14 +1,15 @@
 # Dynamic Dashboard
-Im Folgenden werden die einzelnen Unter-Ordner, Skripte und Dateien aus dem Ordner Frontend vorgestellt. 
+In diesem NodeJS Backend werden die Daten für das Frontend bereitgestellt, die Nutzer verwaltet und authentifiziert.
+Im Folgenden werden die einzelnen Unter-Ordner, Skripte und Dateien aus dem Ordner Backend vorgestellt. Authentifizierung datenberietsstellung für Frontend USer Admin
 
 
 ## Helper
 ### auth.js
-Dieses Modul verwaltet die Authentifizierung des Login und die Validierung der verschiedenenen User.
+Dieses Modul verwaltet die Authentifizierung des Login und die Validierung der verschiedenen User.
 
 ---
 #### `signup(req,res)`
-Diese Methode verwaltet den Login Prozess für eine Anfrage.
+Diese Methode verwaltet den Prozess für die Erstellung eines Nutzers.
 
 - **Parameter:**
     - **req** (Object):  request body 
@@ -24,7 +25,7 @@ In dieser Methode wird der Login Prozess verwaltet.
 ---
 
 #### `proofToken(req) `
-Diese Methode validiert einen Nutzer.
+Diese Methode validiert den Token eines Nutzers.
 
 - **Parameter:**
     - **req** (Object): request body 
@@ -33,19 +34,12 @@ Diese Methode validiert einen Nutzer.
     - bool
 ---
 
-### config.js
-```
-  module.exports = {
-    secret: "dpenzuqq-iabutv-oyj"
- }
-```
-
 ### dateParser.js
-In diesem Modul wird das Format des Datums angepasst
+In diesem Modul wird das Format des Datums angepasst.
 
 ---
 #### `convertMonthDataToIsoFormat(dataset)`
-Diese Methode bekommt ein Datenset mit Monatsdaten in String Format übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
+Diese Methode bekommt ein Datenset mit invaliden Monatsdaten übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
 
 - **Parameter:**
     - **dataset** (Object): Zeitreihen
@@ -55,7 +49,7 @@ Diese Methode bekommt ein Datenset mit Monatsdaten in String Format übergeben, 
     - konvertierter Datensatz
 ---
 #### `convertQuarterDataToIsoFormat(dataset)`
-Diese Methode bekommt ein Datenset mit Quartalsdaten in String Format übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
+Diese Methode bekommt ein Datenset mit invalden Quartalsdaten übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
 
 - **Parameter:**
     - **dataset** (Object): Zeitreihen
@@ -65,7 +59,7 @@ Diese Methode bekommt ein Datenset mit Quartalsdaten in String Format übergeben
     - konvertierter Datensatz
 ---
 #### `convertYearDataToIsoFormat(dataset)`
-Diese Methode bekommt ein Datenset mit Jahresdaten in String Format übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
+Diese Methode bekommt ein Datenset mit invaliden Jahresdaten übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
 
 - **Parameter:**
     - **dataset** (Object): Zeitreihe
@@ -90,13 +84,13 @@ Diese Methode berechnet für eine übergebene Zeitreihe eine Kennzahl, die entwe
 ---
 
 ## Middlewares    
-TODO
+Spezifische Middleware Komponenten für die Authentifizierung und Erstellung von Nutzern.
 
 ### authJwt.js   
-In diesem Modul wird geprüft, ob ein Nutzer die Adminrechte besitzt und authorisiert ist
+In diesem Modul wird geprüft, ob ein Nutzer die Adminrechte besitzt und authorisiert ist.
 
 ---
-#### `verifyToken = (req,res,next) =>`
+#### `verifyToken(req,res,next)`
 Prüft ob ein Nutzer authorisiert ist und gibt falls nicht eine entsprechende Meldung aus.
 
 - **Parameter:**
@@ -104,7 +98,7 @@ Prüft ob ein Nutzer authorisiert ist und gibt falls nicht eine entsprechende Me
     - **res** (Object): Response Body
     - **next** (TODO): express.NextFunction
 ---
-#### `isAdmin = (req, res, next) =>`
+#### `isAdmin(req, res, next)`
 Prüft ob ein Nutzer über die Adminrechte verfügt und gibt falls nicht eine entsprechende Meldung aus.
 
 - **Parameter:**
@@ -118,7 +112,7 @@ Prüft ob ein Nutzer über die Adminrechte verfügt und gibt falls nicht eine en
 In diesem Modul wird beim Erstellen eines neuen Nutzers geprüft, ob die angegebene E-mail Adresse schon im System existiert.
 
 ---
-#### `checkDuplicateEmail = (req,res,next) => `
+#### `checkDuplicateEmail(req,res,next)`
 Diese Methode prüft, ob eine E-mail Adresse schon im System existiert.
 
 - **Parameter:**
@@ -128,8 +122,9 @@ Diese Methode prüft, ob eine E-mail Adresse schon im System existiert.
 
 
 ## Mongoose  
-TODO
+Enthält alle Schemas Definitionen für die MongoDB.
 ### Role.js  
+Beschreibt das Schema der Rollen für die MongoDB.
 
 
 ### Sites.js
@@ -137,11 +132,11 @@ TODO
 ### User.js
 
 ## Router  
-TODO
+
 ### Routes  
-TODO
+
 #### auth.js   
-TODO
+Konfiguration der Schnittstellen für die Athentifizierung.
 
 ---
 ##### `POST signUp`  
@@ -150,7 +145,6 @@ Diese Methode erstellt einen neuen Nutzer.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
-    - **next** (TODO): express.NextFunction
 ---
 ##### `POST signIn`  
 Erstellt clientseitig einen Cookie, falls der User authorisiert ist.
@@ -161,7 +155,7 @@ Erstellt clientseitig einen Cookie, falls der User authorisiert ist.
 
 
 #### db.js
-TODO
+Konfiguration der Schnittstellen für die Dateninteraktion.
 
 ---
 ##### `GET isAuth`  
@@ -186,7 +180,7 @@ Gibt alle Nutzer zurück.
     - **res** (Object): Response Body
 ---
 ##### `GET deleteUser`  
-Löscht einen bestimmten Nutzer.
+Löscht einen übergebenen Nutzer.
 
 - **Parameter:**
     - **req** (Object): Request Body
@@ -220,27 +214,21 @@ Liefert die Tabellennamen von allen Tabellen nach Zeitraum (Monat, Quartal, Jahr
     - **req** (Object): Request Body
     - **res** (Object): Response Body
 ---
-##### `GET insertEntry`  
-TODO
+##### `POST insertEntry`  
+Let eine Zeitreihe und ihre PArameter an.
 
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
 ---
-##### `GET addSite`  
+##### `POST addSite`  
 Erstellt eine Seite an.
 
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
 ---
-##### `GET addSite`  
-Erstellt eine neue Seite.
 
-- **Parameter:**
-    - **req** (Object): Request Body
-    - **res** (Object): Response Body
----
 ##### `GET getSite`  
 Gibt alle Seiten zurück. Falls ein Seitenname übergeben wurde, nur eine bestimmte Seite.
 
@@ -269,29 +257,14 @@ Löscht alle Seiten. Falls ein Seitenname übergeben wurde, wird nur die letzte 
     - **req** (Object): Request Body
     - **res** (Object): Response Body
 ---
-##### `GET deleteSiteNull`  
-Löscht die null Seite.
-
-- **Parameter:**
-    - **req** (Object): Request Body
-    - **res** (Object): Response Body
-
 
 
 ### index.js  
-TODO
-
----
-##### `POST *`  
-Prüft ob der Body im Json Format ist und routet alle POST Calls TODO.
-
-- **Parameter:**
-    - **req** (Object): Request Body
-    - **res** (Object): Response Body
+Deckt allgemeine Middleware Funktionen ab.
 
 
 
-## app.js
-TODO
+### app.js
+Initialer Start des Servers und Einstellung aller notwendigen Parameter.
 
 
