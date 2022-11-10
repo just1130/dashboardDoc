@@ -1,58 +1,68 @@
 # Frontend 
 Im Folgenden werden die einzelnen Unter-Ordner, Skripte und Dateien aus dem Ordner Frontend vorgestellt. 
 
-## public
-
--> dashboardFrontend -> dashboard -> src 
+Wir starten in der Ordnersturktur
+dashboardFrontend -> dashboard -> src
 
 ## Components
 ### Charts
 In diesem Ordner sind die Components für die verschiedenen Diagramme hinterlegt. 
 
+<br>
 
 #### AcfandPacf.jsx
+Logik und Darstellung der Prognose Diagramme auf der Prognose Seite.
+
 ---
 ##### `getData(data)`
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-  - **data (Object):** Datenreihen des Modells.
+  - **data**(Object): Datenreihen des Modells.
 <br>
 
 #### AreaChart.jsx
+Logik und Darstellung der Flächendiagramme.
+
 ---
 ##### `getData(data)`
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data (Object):** Datenreihen des Modells.
+    - **data**(Object): Datenreihen des Modells.
 <br>
 
 #### BarChart.jsx
+Logik und Darstellung der Balkendiagramme.
+
 ---
 ##### `getData(data)`
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data (Object):** Datenreihen des Modells.
+    - **data**(Object): Datenreihen des Modells.
 <br>
 
 #### LineChart.jsx
+Logik und Darstellung der Liniendiagramme.
+
 ---
 ##### `getData(data)`
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data (Object):** Datenreihen des Modells.
+    - **data**(Object): Datenreihen des Modells.
 <br>
 
 #### ScatterChart.jsx
+Logik und Darstellung der Streudiagramme.
+
 ---
 ##### `getData(data)`
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data (Object):** Datenreihen des Modells.
+    - **data**(Object): Datenreihen des Modells.
 <br>
 
 ### WizardSteps
@@ -75,7 +85,7 @@ Aktualisieren und in den State einfügen.
 <br>
    
 #### StepOne.jsx
-Im ersten Schritt wird die Zeitreihe und der Titel des zu erstellenden Elements übergeben.
+Auswahl des Titels und der Zeitreihe der zu erstellenden Kachel.
 
 ---
 ##### `goToStepTwo()`
@@ -84,7 +94,7 @@ Validierung und Übergang zu Schritt zwei.
 <br>
 
 #### StepTwo.jsx
-Im zweiten Schritt wird entschieden, ob ein Diagramm-, Freitext- oder Kennzahl-Element erstellt wird.
+Auswahl zwischen Diagramm-, Freitext- oder Kennzahl-Element.
 
 ---
 ##### `goToStepThree()`
@@ -128,8 +138,8 @@ Tooltip nach Schließen des Dropdowns aktualisieren.
 Ändert das Date-Objekt für Start und Ende.
 
 - **Parameter:**
-    - **key (Number):** Aktuelle Position im Array.
-    - **key (Number):** Markierung, wenn Anfang oder Ende geändert wird.
+    - **key**(Number): Aktuelle Position im Array.
+    - **key**(Number): Markierung, wenn Anfang oder Ende geändert wird.
     
 ---
 ##### `getTables()`
@@ -140,14 +150,14 @@ Ruft alle Tabellennamen aus der Datenbank ab.
 Wird verwendet, nachdem der Benutzer auf der Schaltfläche 'add' geklickt hat, um eine neue Datenreihe hinzuzufügen.
 
 - **Parameter:**
-    - **key (Number):** Position.
+    - **key**(Number): Position.
     
 ---
 ##### `prognosisChecked(key)`
 Ändert den Status der Prognose-Checkox.
 
 - **Parameter:**
-    - **key (Integer):** Status.
+    - **key**(Integer): Status.
 
 
 ---
@@ -167,7 +177,7 @@ Neue Elemente speichern.
 Löschen einer Zeitreihe.
 
 - **Parameter:**
-    - **key (Integer):** Zeitreihe.
+    - **key**(Integer): Zeitreihe.
 <br>
 
 #### StepFive.jsx
@@ -202,6 +212,7 @@ Validiert die E-Mail Adresse.
 ---
 #### `validatedPw()`
 Validiert das Passwort.
+
 <br>
 
 ### AddNewAdminPage.jsx  
@@ -216,11 +227,11 @@ Sendet eine bestimmte Seite an das Backend und die Variablen werden geupdatet.
 In dieser Methode wird geprüft, ob schon eine Seite mit dem übergebenem Seitennamen existiert.
 
 - **Parameter:**
-    - **siteName** (String): Seitenname
+    - **siteName** (String): Seitenname.
 - **Returntyp:**
     - Bool
 - **Returns:** 
-    - Gibt zurück ob eine Seite mit diesem Namen schon existiert
+    - Gibt zurück ob eine Seite mit diesem Namen schon existiert.
 
 <br>
 
@@ -323,9 +334,6 @@ TODO Passt das so?
 
 - **Parameter:**
     - **data** (Object[]): Metadaten aller Tabellen 
-- **Returntyp:**
-    - 
-- **Returns:** 
    
 <br>
 
@@ -351,8 +359,6 @@ Design der Navbar.
 ### Sidebar.jsx
 Design und Interaktion der Sidebar.
 
-<br>
-
 ---
 #### `handleCloseSideBar ()`
 Klappt die Sidebar ein.
@@ -376,12 +382,16 @@ TODO
 ### Text.jsx
 TODO
 
+<br>
+
 ### Wizard.jsx
 Dialog zum Erstellen und Bearbeiten von Kacheln. Ruft Components aus WizardSteps auf.
 
 ---
 #### `closeTheWizard()`
 Schließt den Dialog und aktualisiert die Elemente.
+
+<br>
 
 ## Contexts
 TODO
@@ -403,6 +413,7 @@ Ruft die Daten der einzelnen Kachlen der zu ladenden Seite ab.
 - **Parameter:**
     - **siteName**(String):  Name der zu ladenden Seite
 
+<br>
 
 ## Pages
 Enthält die Components für die einzelnen Seiten in der Navbar und des Logins.
@@ -493,7 +504,7 @@ TODO
     - Bool
 - **Returns:*
     - Gibt zurück, ob das Format der E-Mail Adresse gültig ist.
-    - 
+    
 ---
 #### `closeDialog()`
 Schließt den Dialog und aktualisiert entsprechende Elemente.
