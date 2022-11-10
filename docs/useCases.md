@@ -6,7 +6,7 @@ Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgef�
 
 ### Login & Logout   
 ![Login Logout](https://github.com/just1130/dashboardDoc/blob/main/Data/Login_Logout.gif)   
-![GIF Login Logout Bitte nochmal machen, da nur noch das GIF und nicht mehr das ursprünglihce Video existiert]()
+![GIF Login Logout Bitte nochmal machen, da nur noch das GIF und nicht mehr das ursprünglihce Video existiert](https://github.com/just1130/dashboardDoc/blob/46bbf326e65d9e7a633a1cfef39866acdd24ad59/Data/Dashboard%20Bauindustrie%20-%20Gesch%C3%A4ftlich%20%E2%80%93%20Microsoft_%20Edge%202022-11-10%2018-51-26%20(1).gif)
 
 
 ### Seiten Verwaltung
