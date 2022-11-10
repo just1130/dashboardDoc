@@ -13,10 +13,14 @@ Hier werden Login Prozesse beschrieben
 #### Logout
 Hier werden Logout Prozesse beschrieben
 
-### Seite erstellen, bearbeiten, löschen
+### Seiten Verwaltung
 ![GIF erstellen wie folgt beschrieben:]()
 - "Seite 1" erstellen
 - "Seite 2" erstellen ->  beliebig bearbeiten -> löschen 
+
+#### Seite erstellen
+#### Seite bearbeiten 
+#### Seite löschen 
 
 ### User Administration  
 Auf dieser Seite werden die verschiedenen Nutzer verwaltet. Nutzer können hinzugefügt oder gelöscht werden.
@@ -41,8 +45,12 @@ Hier werden die Nutzer löschen Prozesse beschriben
     4. Wizardstep 4 - Datenreihe auswählen: Kurzbeschreibung beifügen, optional Zeitfilter und Prognose auswählen. Kann bis zu 3 Datenreihen in einem Diagramm anzeigen
     5. Wizardstep 5 - Y-Achse beschriften und optionaler Text beifügen
 
+#### Wizardstep 1
+#### Wizardstep 2
+#### etc ...
+
 ## Dashboardseite 
-### Dashboardseite Basic?  
+### Dashboardseite Basic  
 ![Screenshot der Dashboardseite]() mit so vielen Kacheln dass die Seite ausgefüllt ist
 
 ## Prognoseseite
