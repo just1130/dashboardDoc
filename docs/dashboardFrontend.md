@@ -189,19 +189,19 @@ Neue Elemente speichern.
 <br>
 
 ### AddNewUser.jsx  
-In diesem Component werden neue Benutzer angelegt.
+Legt neue Benutzer an.
 
 ---
 #### `saveNewUser()`
-In dieser Methode wird der neue Benutzer an das NodeJS Backend gesendet.
+Sendet den neuen Benutzer an das NodeJS Backend.
 
 ---
 #### `validatedEmail()`
-In dieser Methode wird die E-Mail Adresse validiert. 
+Validiert die E-Mail Adresse. 
 
 ---
 #### `validatedPw()`
-In dieser Methode wird das Passwort validiert.
+Validiert das Passwort.
 <br>
 
 ### AddNewAdminPage.jsx  
@@ -209,7 +209,7 @@ In diesem Component wird eine neue Admin Seite angelegt.
 
 ---
 #### `saveNewPage()`
-In dieser Methode wird eine bestimmte Seite mit seinen dazugehörigen Elementen an das Backend gesendet und geupdatet. 
+Sendet eine bestimmte Seite an das Backend und die Variablen werden geupdatet. 
 
 ---
 #### `duplicate(siteName)`
@@ -225,54 +225,297 @@ In dieser Methode wird geprüft, ob schon eine Seite mit dem übergebenem Seiten
 <br>
 
 ### CreateNewModel.jsx
+TODO 
+
+---
+#### `calculateNewModel()`
+TODO 
+   
+---
+#### `saveModel()`
+TODO 
+
+<br>
 
 ### DeleteAdminPage.jsx
+Startet den Löschvorgang von Adminseiten.
+
+---
+#### `deletePage ()`
+Übergibt den Seitennamen, der zu löschenden Seite an das Backend und alle Variablen werden geupdatet.
+
+<br>
+
 ### DeleteElementDialog.jsx
+Startet den Löschvorgang von einer Kachel einer Adminseite.
+
+---
+#### `deleteElement()`
+Übergibt eine zu löschende Kachel an das Backend und alle Variablen werden geupdatet.
+
+<br>
+
 ### DeleteUser.jsx
+Startet den Löschvorgang eines Nutzers.
+
+---
+#### `deleteUser()`
+Übergibt einen zu löschenden Nutzer an das Backend und alle Variablen werden geupdatet.
+
+<br>
+
 ### DropdownPrognosis.jsx
-### EditAdminPageName.jsx
-### index.jsx
-### KPIContainer.jsx 
-### LoginButton.jsx
-### LogoutButton.jsx
-### Navbar.jsx
-### Sidebar.jsx
-### Text.jsx
-### Wizard.jsx
-
-## Contexts
-### contextProvider.js
-
-## Pages
-### Admin.jsx
-### CustomPrognosis.jsx
-### Dashboard.jsx
-### Login.jsx
-### Useradministration.jsx
-
-## App.js
-
-
-
-
-
-
-#### WizardSteps
-
-##### Drop
+Enthält die Logik für die Dropdownliste der Zeitreihen auf der Prognose Seite.
 
 ---
-##### `getTables()`
-Ruft die Tabellennamen ab.
----
+#### `getTables()`
+Liefert alle Tabellennamen zurück.
 
-##### `onFiltering(e)`
+---
+#### `onFiltering(e)`
 Filtert die Dropdown-Einträge.
 
 - **Parameter:**
-    - **e (Object):** Suchanfrage.
----
+    - **e:(Object)** Suchanfrage.
 
-##### `onClose()`
-Aktualisieren und in den State einfügen.
 ---
+#### `onBeforeRender()`
+Renderfunktion für die Tooltip-Komponente.
+
+---
+#### `onClose()`
+Aktualisieren und in den State einfügen.
+
+<br>
+
+### EditAdminPageName.jsx
+Ändert den Seitennamen.
+
+
+
+---
+#### `editPage(newName)`
+Prüft, ob schon eine Seite mit dem übergebenem Seitennamen existiert.
+
+- **Parameter:**
+    - **newName** (String): neuer Seitenname
+
+---
+#### `duplicate(siteName)`
+Prüft, ob schon eine Seite mit dem übergebenem Seitennamen existiert.
+
+- **Parameter:**
+    - **siteName** (String): Seitenname
+- **Returntyp:**
+    - Bool
+- **Returns:** 
+    - Gibt zurück ob eine Seite mit diesem Namen schon existiert
+
+<br>
+
+### KPIContainer.jsx 
+TODO
+
+---
+#### `getData(data)`
+Gibt alle Kennzahlen nach Namen, Start und Enddatum gefiltert zurück.
+TODO Passt das so?
+
+- **Parameter:**
+    - **data** (Object[]): Metadaten aller Tabellen 
+- **Returntyp:**
+    - 
+- **Returns:** 
+   
+<br>
+
+### LoginButton.jsx
+Logik und Design des LoginButtons.
+
+<br>
+
+### LogoutButton.jsx
+Logik und Design des LogoutButtons.
+
+---
+#### `logout()`
+Meldet einen angemeldeten Nutzer ab.
+
+<br>
+
+### Navbar.jsx
+Design der Navbar.
+
+<br>
+
+### Sidebar.jsx
+Design und Interaktion der Sidebar.
+
+<br>
+
+---
+#### `handleCloseSideBar ()`
+Klappt die Sidebar ein.
+
+---
+#### `changeSite ()`
+Wechselt die Ansicht des Dashboards auf eine übergebene Seite und aktualisert die Elemente. 
+
+- **Parameter:**
+    - **siteName** (String): Seitenname 
+
+---
+#### `sideBarClick(siteName)`
+TODO
+
+- **Parameter:**
+    - **siteName** (String): TODO 
+
+<br>
+
+### Text.jsx
+TODO
+
+### Wizard.jsx
+Dialog zum Erstellen und Bearbeiten von Kacheln. Ruft Components aus WizardSteps auf.
+
+---
+#### `closeTheWizard()`
+Schließt den Dialog und aktualisiert die Elemente.
+
+## Contexts
+TODO
+
+<br>
+
+### contextProvider.js
+TODO
+
+---
+#### `updateSidebarElements()`
+Aktualisiert die Seiten der der Sidebar.
+
+
+---
+#### `updateAdminElements(siteName)`
+Ruft die Daten der einzelnen Kachlen der zu ladenden Seite ab.
+
+- **Parameter:**
+    - **siteName**(String):  Name der zu ladenden Seite
+
+
+## Pages
+Enthält die Components für die einzelnen Seiten in der Navbar und des Logins.
+
+### Admin.jsx
+Logik und Design der Adminseite.
+
+---
+#### `checkAdminSite(body)`
+TODO
+
+- **Parameter:**
+    - **body** (TODO):TODO 
+    
+---
+#### `addNewElement()`
+Startet Prozess zum Erstellen einer Kachel.
+
+---
+#### `edit(item, key)`
+Startet Prozesse zum Bearbeiten einer Kachel.
+
+- **Parameter:**
+    - **item** (TODO):TODO 
+    - **key** (TODO):TODO  
+
+<br>
+
+### CustomPrognosis.jsx
+Ermöglicht es Prognosen detaillierter zu betrachten und Parameter manuell anzupassen.
+
+---
+#### `getModelInfos(name)`
+TODO
+
+- **Parameter:**
+    - **name** (String): TODO
+
+---
+#### `setSelectedValue(name, timeInterval)()`
+TODO
+
+- **Parameter:**
+    - **name** (String):  TODO
+    - **timeInterval** (TODO): TODO  
+    
+---
+#### `calculateNewModel()`
+TODO
+
+---
+#### `saveModel()`
+Speichert das neu erstellte Model. TODO
+
+---
+#### `updateSelectedName (name)`
+TODO
+
+- **Parameter:**
+    - **name** (String):  TODO
+
+<br>
+
+### Dashboard.jsx
+Zeigt die erstellten Kacheln.
+
+---
+#### `checkAdminSite(adminSite)`
+Prüft, ob Änderungen an der übergebenen Seite vorgenommen wurden und aktualisiert die Seite im Dashboard anschließend.
+
+- **Parameter:**
+    - **adminSite** (TODO): TODO
+
+<br>
+
+### Login.jsx
+Verwaltet und designt die Anmelde Seite.
+
+---
+#### `sendLoginRequest()`
+TODO
+
+---
+#### `validated()`
+Überprüft das Format der E-Mail Adresse.
+
+- **Returntyp:**
+    - Bool
+- **Returns:*
+    - Gibt zurück, ob das Format der E-Mail Adresse gültig ist.
+    - 
+---
+#### `closeDialog()`
+Schließt den Dialog und aktualisiert entsprechende Elemente.
+
+<br>
+
+### Useradministration.jsx
+Verwaltung der Nutzer.
+
+---
+#### `updateUsers ()`
+TODO
+
+---
+#### `closeWindow ()`
+TODO
+
+---
+#### `getUsers()`
+Ruft alle Nutzer aus der Datenbank ab.
+
+<br>
+
+
+
