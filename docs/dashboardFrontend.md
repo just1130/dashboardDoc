@@ -17,6 +17,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
   - **data (Object):** Datenreihen des Modells.
+<br>
 
 #### AreaChart.jsx
 ---
@@ -25,6 +26,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data (Object):** Datenreihen des Modells.
+<br>
 
 #### BarChart.jsx
 ---
@@ -33,6 +35,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data (Object):** Datenreihen des Modells.
+<br>
 
 #### LineChart.jsx
 ---
@@ -41,7 +44,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data (Object):** Datenreihen des Modells.
-
+<br>
 
 #### ScatterChart.jsx
 ---
@@ -50,7 +53,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data (Object):** Datenreihen des Modells.
-
+<br>
 
 ### WizardSteps
 #### Drop.jsx 
@@ -69,7 +72,8 @@ Filtert die Dropdown-Einträge.
 ##### `onClose()`
 Aktualisieren und in den State einfügen.
 
-
+<br>
+   
 #### StepOne.jsx
 Im ersten Schritt wird die Zeitreihe und der Titel des zu erstellenden Elements übergeben.
 
@@ -77,6 +81,7 @@ Im ersten Schritt wird die Zeitreihe und der Titel des zu erstellenden Elements 
 ##### `goToStepTwo()`
 Validierung und Übergang zu Schritt zwei.
 
+<br>
 
 #### StepTwo.jsx
 Im zweiten Schritt wird entschieden, ob ein Diagramm-, Freitext- oder Kennzahl-Element erstellt wird.
@@ -85,6 +90,7 @@ Im zweiten Schritt wird entschieden, ob ein Diagramm-, Freitext- oder Kennzahl-E
 ##### `goToStepThree()`
 Gehe zu Schritt drei und füge Datum zu ElementBody hinzu.
 
+<br>
 
 #### StepThree.jsx
 Im dritten Schritt gibt es 3 Fälle:   
@@ -104,6 +110,7 @@ Wenn 'Text' gewählt wurde, wird der Wizard an dieser Stelle beendet.
 ##### `saveElements()`
 Neue Elemente nach Texteingabe speichern.
 
+<br>
 
 #### StepFour.jsx
 Im vierten Schritt werden die Datenreihen ausgesucht, Kurzbeschreibung beigefügt,  Zeitfilter angepasst (optinal) und entschieden ob die Datenreihe prognostiziert werden soll.
@@ -161,7 +168,7 @@ Löschen einer Zeitreihe.
 
 - **Parameter:**
     - **key (Integer):** Zeitreihe.
-
+<br>
 
 #### StepFive.jsx
 Letzter Schritt im StepWizard. Hier wird dem Element optional ein Textfeld hinzugefügt.
@@ -177,15 +184,48 @@ Wird vor dem Speichern aufgerufen, um die Benutzereingaben zu überprüfen.
 
 ---
 ##### `saveElements()`
-Neue Elemente nach Texteingabe speichern.
+Neue Elemente speichern.
 
-
-
-
+<br>
 
 ### AddNewUser.jsx  
+In diesem Component werden neue Benutzer angelegt.
+
+---
+#### `saveNewUser()`
+In dieser Methode wird der neue Benutzer an das NodeJS Backend gesendet.
+
+---
+#### `validatedEmail()`
+In dieser Methode wird die E-Mail Adresse validiert. 
+
+---
+#### `validatedPw()`
+In dieser Methode wird das Passwort validiert.
+<br>
+
 ### AddNewAdminPage.jsx  
+In diesem Component wird eine neue Admin Seite angelegt.
+
+---
+#### `saveNewPage()`
+In dieser Methode wird eine bestimmte Seite mit seinen dazugehörigen Elementen an das Backend gesendet und geupdatet. 
+
+---
+#### `duplicate(siteName)`
+In dieser Methode wird geprüft, ob schon eine Seite mit dem übergebenem Seitennamen existiert.
+
+- **Parameter:**
+    - **siteName** (String): Seitenname
+- **Returntyp:**
+    - Bool
+- **Returns:** 
+    - Gibt zurück ob eine Seite mit diesem Namen schon existiert
+
+<br>
+
 ### CreateNewModel.jsx
+
 ### DeleteAdminPage.jsx
 ### DeleteElementDialog.jsx
 ### DeleteUser.jsx
