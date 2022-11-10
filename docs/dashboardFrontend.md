@@ -18,7 +18,7 @@ Logik und Darstellung der Prognose Diagramme auf der Prognose Seite.
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-  - **data**(Object): Datenreihen des Modells.
+  - **data** (Object): Datenreihen des Modells.
 <br>
 
 #### AreaChart.jsx
@@ -29,7 +29,7 @@ Logik und Darstellung der Flächendiagramme.
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data**(Object): Datenreihen des Modells.
+    - **data** (Object): Datenreihen des Modells.
 <br>
 
 #### BarChart.jsx
@@ -40,7 +40,7 @@ Logik und Darstellung der Balkendiagramme.
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data**(Object): Datenreihen des Modells.
+    - **data** (Object): Datenreihen des Modells.
 <br>
 
 #### LineChart.jsx
@@ -51,7 +51,7 @@ Logik und Darstellung der Liniendiagramme.
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data**(Object): Datenreihen des Modells.
+    - **data** (Object): Datenreihen des Modells.
 <br>
 
 #### ScatterChart.jsx
@@ -62,7 +62,7 @@ Logik und Darstellung der Streudiagramme.
 Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
-    - **data**(Object): Datenreihen des Modells.
+    - **data** (Object): Datenreihen des Modells.
 <br>
 
 ### WizardSteps
@@ -138,8 +138,8 @@ Tooltip nach Schließen des Dropdowns aktualisieren.
 Ändert das Date-Objekt für Start und Ende.
 
 - **Parameter:**
-    - **key**(Number): Aktuelle Position im Array.
-    - **key**(Number): Markierung, wenn Anfang oder Ende geändert wird.
+    - **key** (Number): Aktuelle Position im Array.
+    - **key** (Number): Markierung, wenn Anfang oder Ende geändert wird.
     
 ---
 ##### `getTables()`
