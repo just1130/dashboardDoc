@@ -14,10 +14,10 @@ Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgef�
 - "Seite 1" erstellen
 - "Seite 2" erstellen ->  beliebig bearbeiten -> löschen
 
+## Dashboardseite 
+### Dashboardseite Basic  
+![Screenshot der Dashboardseite]() mit so vielen Kacheln dass die Seite ausgefüllt ist 
 
-## User Administration  
-Auf dieser Seite werden die verschiedenen Nutzer verwaltet. Nutzer können hinzugefügt oder gelöscht werden.
-![GIF Nutzer anlegen und anschließend löschen]()
 
 
 
@@ -43,9 +43,7 @@ Auf dieser Seite werden die verschiedenen Nutzer verwaltet. Nutzer können hinzu
 ![GIF wie Diagramm bearbeitet wird]()
 Vllt einfach eine weitere Datenreihe zum zuvor erstellten Diagramm hinzufügen
 
-## Dashboardseite 
-### Dashboardseite Basic  
-![Screenshot der Dashboardseite]() mit so vielen Kacheln dass die Seite ausgefüllt ist
+
 
 ## Prognoseseite
 Auf dieser Seite können Prognosen genauer betrachtet werden und optional angepasst werden.
@@ -60,7 +58,9 @@ Auf dieser Seite können Prognosen genauer betrachtet werden und optional angepa
 3. Zeitraum anpassen
 4. Paramater anpassen
 
-
+## User Administration  
+Auf dieser Seite werden die verschiedenen Nutzer verwaltet. Nutzer können hinzugefügt oder gelöscht werden.
+![GIF Nutzer anlegen und anschließend löschen]()
 
 
 
