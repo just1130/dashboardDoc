@@ -2,22 +2,36 @@
 Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgeführt und deren Codetechnische? Realisierung dazu genauer erläutert.
 
 
-## Login + erste Seite erstellen  
-Erstmaliges Starten des Dashboards:  
-1. leere Dashboardseite als Nutzer zu sehen
-2. (Login) -> Login Seite
-- TODO Wie meldet sich ein erstmaliger Nutzer an - Postman?
-3. Anmelden
-4. Da noch keine Seite erstellt wurde Seite erstellen
-5. 2.Seite erstellen
-6. 2.Seite bearbeiten
+## Basics
 
-![Login Logout](C:\Users\miche\Documents\GitHub\dashboardDoc\Data\Login_Logout.gif)
+### Login & Logout   
+![Login Logout](https://github.com/just1130/dashboardDoc/blob/main/Data/Login_Logout.gif)
+
+#### Login
+Hier werden Login Prozesse beschrieben
+
+#### Logout
+Hier werden Logout Prozesse beschrieben
+
+### Seite erstellen, bearbeiten, löschen
+![GIF erstellen wie folgt beschrieben:]()
+- "Seite 1" erstellen
+- "Seite 2" erstellen ->  beliebig bearbeiten -> löschen 
+
+### User Administration  
+Auf dieser Seite werden die verschiedenen Nutzer verwaltet. Nutzer können hinzugefügt oder gelöscht werden.
+![GIF Nutzer anlegen und anschließend löschen]()
+
+#### Nutzer hinzufügen    
+Hier werden die Nutzer hinzufügen Prozesse beschrieben
+
+#### Nutzer löschen    
+Hier werden die Nutzer löschen Prozesse beschriben
 
 
 ## Adminseite
 ### Kachel erstellen  
-Hinzufügen einer neuen Kachel:  
+![Hinzufügen einer neuen Kachel wie folgt]() 
 
 1. Per (+)-Button den Wizard Dialog zum Erstellen neuer Kacheln erstellen
 2. StepWizard öffnet mit Wizardstep 1
@@ -28,28 +42,23 @@ Hinzufügen einer neuen Kachel:
     5. Wizardstep 5 - Y-Achse beschriften und optionaler Text beifügen
 
 ## Dashboardseite 
+### Dashboardseite Basic?  
+![Screenshot der Dashboardseite]() mit so vielen Kacheln dass die Seite ausgefüllt ist
 
 ## Prognoseseite
-Auf dieser Seite können PRognosen genauer betrachtet werden und optional angepasst werden.
+Auf dieser Seite können Prognosen genauer betrachtet werden und optional angepasst werden.
 
-### Prognose anschauen und manuel anpassen   
+### Prognoseseite Basic
+![Screenshot der Prognoseseite nachdem Datenreieh ausgewählt wurde]()
+
+### Prognose manuell anpassen
+![GIF wie Prgonosemodell manuell angepasst wird]()  
 1. Tabelle auswählen
 2. Auswählen ob bearbeiten
 3. Zeitraum anpassen
 4. Paramater anpassen
 
-## User Administration
-Auf dieser Seite werden die verschiedenen Nutzer verwaltet. Nutzer können hinzugefügt oder gelöscht werden.
 
-### Nutzer hinzufügen 
-
-1. (Nutzer hinzufügen)-Button klicken
-2. Mailadresse angeben
-3. Passwort angeben
-
-### Nutzer löschen  
-1. (MülleimerIcon) des entsprechenden Nutzers klicken
-2. Bestätigen um den ausgewählten Nutzer zu löschen
 
 
 
