@@ -11,10 +11,27 @@ Diese ReadMe enthält eine ausführliche Anleitung zur Installation des Projekts
 
 Eine genauere Dokumentation über die jeweiligen Unterordnern finden Sie in der dazugehörigen Seite. 
 
+## Problemstellung des Projekts
+Die Erstellung von Konjunktur-, Struktur- und Marktanalysen sind für Bauunternehmen Grundlage für wichtige Unternehmensentscheidungen, betreffend Einkauf, über Investitionen und Projekte. Viele Kennzahlen in diesen Bereichen werden schon öffentlich erfasst und von den Unternehmen auch abgefragt. Die Interpretation und Darstellung gestalteten sich allerdings, vor allem über viele Quellen hinweg, bisher schwierig.
+So auch beim Hauptverband der deutschen Bauindustrie, dem Kooperationspartner dieses Projekts. Dieser erstellt bisher händisch Berichte zu aktuellen Zahlen und Fakten aus der Bauindustrie. Zum Beispiel zur Baukonjunktur, zur Bauwirtschaft oder zum Arbeitsmarkt. Die Zielgruppe sind dabei Manager deutscher Bauunternehmen & die Mitglieder des Verbandes. 
+An diese werden Berichte, zum einen unregelmäßig, in Form eines E-Mail Newsletters und zum anderen regelmäßig, in Form von Präsentationen auf der eigenen Homepage veröffentlicht. Zu bemerken ist hierbei, dass die Homepage nicht vom Verband, sondern einer Agentur verwaltet wird und der Verband keine Möglichkeit hat, selbst Dokumente zu veröffentlichen.
+Das Erstellen der Berichte stellt dementsprechend aktuell einen hohen manuellen Aufwand dar, da sich die Daten mühsam aus der eigenen ELVIRA-Datenbank zusammengeklickt werden müssen.
+
+![alternativer text](link)
+
+Außerdem sind diese Berichte nicht dynamisch anpassbar. Das bedeutet für deren Empfänger, dass Daten unter Umständen nicht in den Kontext gesetzt werden können, wie es zur Erkenntnisgewinnung nötig wäre.
 
 
 ## Ziel des Projekts
-Hier nochmal beschreiben was unser Ziel war
+Auf Grund der im vorherigen Absatz beschriebenen Probleme haben wir mit dem Bauverband folgendes Ziel für unser Projekt festgelegt:
+Die Entwicklung eines Dashboards für Baustatistiken aus verschiedenen Blickwinkeln. 
+Außerdem haben wir einige Rahmenbedingen und Kriterien definiert, um dieses Ziel zu erreichen:
+
+- Möglichkeit zur flexiblen Einbindung unterschiedlichster Datenquellen, jedoch mindestens der ELVIRA-Datenbank des Verbandes
+- Möglichkeit zum schnellen & einfachen Zugriff auf eingebundenen Daten
+- Möglichkeit zur dynamischen Anpassung des Dashboards
+- Möglichkeit zur Erstellung von Zeitreihen Prognosen, auf Basis der eingebundenen Daten
+- Möglichkeit zur Veröffentlichung von Seiten durch Administratoren
 
 ## Installation
 
