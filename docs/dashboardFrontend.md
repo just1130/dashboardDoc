@@ -238,19 +238,6 @@ In dieser Methode wird geprüft, ob schon eine Seite mit dem übergebenem Seiten
 
 <br>
 
-### CreateNewModel.jsx
-TODO 
-
----
-#### `calculateNewModel()`
-TODO 
-   
----
-#### `saveModel()`
-TODO 
-
-<br>
-
 ### DeleteAdminPage.jsx
 Startet den Löschvorgang von Adminseiten.
 
@@ -328,12 +315,12 @@ Prüft, ob schon eine Seite mit dem übergebenem Seitennamen existiert.
 <br>
 
 ### KPIContainer.jsx 
-TODO
+Design und Logik von Kennzahlen in einer Kachel.
 
 ---
 #### `getData(data)`
 Gibt alle Kennzahlen nach Namen, Start und Enddatum gefiltert zurück.
-TODO Passt das so?
+
 
 - **Parameter:**
     - **data** (Object[]): Metadaten aller Tabellen 
@@ -375,15 +362,15 @@ Wechselt die Ansicht des Dashboards auf eine übergebene Seite und aktualisert d
 
 ---
 #### `sideBarClick(siteName)`
-TODO
+Navigiert zur übergebenen Seite.
 
 - **Parameter:**
-    - **siteName** (String): TODO 
+    - **siteName** (String): Seitenname 
 
 <br>
 
 ### Text.jsx
-TODO
+Liefert den Text zurück.
 
 <br>
 
@@ -397,12 +384,8 @@ Schließt den Dialog und aktualisiert die Elemente.
 <br>
 
 ## Contexts
-TODO
-
-<br>
-
 ### contextProvider.js
-TODO
+Aktualisiert Sidebarelemente und Kacheln.
 
 ---
 #### `updateSidebarElements()`
@@ -414,7 +397,7 @@ Aktualisiert die Seiten der der Sidebar.
 Ruft die Daten der einzelnen Kachlen der zu ladenden Seite ab.
 
 - **Parameter:**
-    - **siteName**(String):  Name der zu ladenden Seite
+    - **siteName**(String):  Name der zu ladenden Seite.
 
 <br>
 
@@ -426,57 +409,50 @@ Logik und Design der Adminseite.
 
 ---
 #### `checkAdminSite(body)`
-TODO
+Wählt die erste Seite aus. Ist keine Seite vorhanden, wird der Nutzer dazu aufgefordert eine neue Seite zu erstellen.
 
 - **Parameter:**
-    - **body** (TODO):TODO 
+    - **body** (Object):Alle Seiten. 
     
 ---
 #### `addNewElement()`
-Startet Prozess zum Erstellen einer Kachel.
+Öffnet den Dialog zum Erstellen einer Kachel.
 
 ---
 #### `edit(item, key)`
-Startet Prozesse zum Bearbeiten einer Kachel.
+Öffnet den Dialog zum Bearbeiten einer Kachel.
 
 - **Parameter:**
-    - **item** (TODO):TODO 
-    - **key** (TODO):TODO  
+    - **item** (Object): Die zu bearbeitende Kachel.
+    - **key** (*): Position.  
 
 <br>
 
 ### CustomPrognosis.jsx
-Ermöglicht es Prognosen detaillierter zu betrachten und Parameter manuell anzupassen.
+Ermöglicht es Prognosen detaillierter zu betrachten und optional dazugehörige Parameter manuell anzupassen.
 
 ---
 #### `getModelInfos(name)`
-TODO
+Fordert Modellinformationen an.
 
 - **Parameter:**
-    - **name** (String): TODO
+    - **name** (String): Name des Modells.
 
 ---
 #### `setSelectedValue(name, timeInterval)()`
-TODO
+Aktualisiert States, wenn Daten ausgewählt wurden.
 
 - **Parameter:**
-    - **name** (String):  TODO
-    - **timeInterval** (TODO): TODO  
+    - **name** (String):  Aus Dropdown ausgewähltes Modell.
+    - **timeInterval** (String): Timeinterval (Monat, Quartal, Jahr).  
     
 ---
 #### `calculateNewModel()`
-TODO
+Gibt die Daten an das Backend weiter und wartet, bis Modell berechnet wurde.
 
 ---
 #### `saveModel()`
-Speichert das neu erstellte Model. TODO
-
----
-#### `updateSelectedName (name)`
-TODO
-
-- **Parameter:**
-    - **name** (String):  TODO
+Speichert das neu erstellte Model.
 
 <br>
 
@@ -484,20 +460,18 @@ TODO
 Zeigt die erstellten Kacheln.
 
 ---
-#### `checkAdminSite(adminSite)`
-Prüft, ob Änderungen an der übergebenen Seite vorgenommen wurden und aktualisiert die Seite im Dashboard anschließend.
+#### `handleDownloadPdf ()`
+Exportiert die Dashboard Seite als PDF.
 
-- **Parameter:**
-    - **adminSite** (TODO): TODO
 
 <br>
 
 ### Login.jsx
-Verwaltet und designt die Anmelde Seite.
+Design und Logik der Anmelde Seite.
 
 ---
 #### `sendLoginRequest()`
-TODO
+Sendet die Client Daten an das Backend.
 
 ---
 #### `validated()`
@@ -505,7 +479,7 @@ TODO
 
 - **Returntyp:**
     - Bool
-- **Returns:*
+- **Returns:**
     - Gibt zurück, ob das Format der E-Mail Adresse gültig ist.
     
 ---
@@ -519,11 +493,11 @@ Verwaltung der Nutzer.
 
 ---
 #### `updateUsers ()`
-TODO
+Aktualisiert die Nutzerliste und schließt den "Nutzer löschen" Dialog.
 
 ---
 #### `closeWindow ()`
-TODO
+Aktualisert die Nutzerliste und schließt den "Nutzer hinzufügen" Dialog
 
 ---
 #### `getUsers()`
