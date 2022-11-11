@@ -8,8 +8,6 @@ dashboardFrontend -> dashboard -> src
 ### Charts
 In diesem Ordner sind die Components für die verschiedenen Diagramme hinterlegt. 
 
-<br>
-
 #### AcfandPacf.jsx
 Logik und Darstellung der Prognose Diagramme auf der Prognose Seite.
 
@@ -19,6 +17,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
   - **data** (Object): Datenreihen des Modells.
+
 <br>
 
 #### AreaChart.jsx
@@ -30,6 +29,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
+
 <br>
 
 #### BarChart.jsx
@@ -41,6 +41,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
+
 <br>
 
 #### LineChart.jsx
@@ -52,6 +53,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
+
 <br>
 
 #### ScatterChart.jsx
@@ -63,6 +65,7 @@ Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
+
 <br>
 
 ### WizardSteps
