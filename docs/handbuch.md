@@ -1,13 +1,13 @@
 # Handbuch
-Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgeführt und beschrieben. Funktionen des Dashboards stehen nur dann zur Verfügung, wenn man sich im System [angemeldet hat](TODO). Ist man nicht angemeldet, hat die Möglichkeit die verschiedenen [Dashboardseiten](TODO) zu betrachten.
+Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgeführt und beschrieben. Funktionen des Dashboards stehen nur dann zur Verfügung, wenn man sich im System [angemeldet hat](TODO). Ist man nicht angemeldet, hat man die Möglichkeit die verschiedenen [Dashboardseiten](TODO) zu betrachten.
 
 
 ## Basics
-Hier werden die Anmelde und Abmelde-Abläufe, sowie die Seitenverwaltung vorgestellt.
+In diesem Abschnitt werden die An- und Abmelde-Abläufe, sowie die Seitenverwaltung vorgestellt.
 
 ### Login & Logout   
-Um sich auf einer Seite anzumelden, muss der Nutzer zuvor von einem Administrator hinterlegt worden sein. Ist der Nutzer bereits im System hinterlegt, kann er sich mit seiner E-Mail Adresse und dem dazugehörigen Passwort anmelden. Ist er angemeldet, hat er Zugang zu den verschiedenen Funktionen als Administrator. Hierzu gehören beispielsweise das Erstellen neuer Dashboardseiten, Anpassen der Prognosen oder Verwalten von Nutzern.
-Möchte sich der Nutzer wieder abmelden, so findet er rechts oben der Logout-Button. Ist der Nutzer abgemeldet, so hat er nur noch Zugang zur öffentlichen Seite des Dashboards, welche verschiedene Dashboardseiten mit den dazugehörigen Kacheln visualisiert.
+Um sich auf einer Seite anzumelden, muss der Nutzer zuvor von einem Administrator angelegt worden sein. Ist der Nutzer bereits im System hinterlegt, kann er sich mit seiner E-Mail Adresse und dem dazugehörigen Passwort anmelden. Ist er angemeldet, hat er Zugang zu den verschiedenen Funktionen als Administrator. Hierzu gehören beispielsweise das Erstellen neuer Dashboardseiten, Anpassen der Prognosen oder Verwalten von Nutzern.
+Möchte sich der Nutzer wieder abmelden, so findet er rechts oben den Logout-Button. Ist der Nutzer abgemeldet, so hat er nur noch Zugang zur öffentlichen Seite des Dashboards, welche verschiedene Dashboardseiten mit den dazugehörigen Kacheln visualisiert.
 
 ![Login Logout](./Data/Login & Logout.gif)   
 
