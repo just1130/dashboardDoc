@@ -1,13 +1,11 @@
 # Forecast and Scraping
-Das Softwaremodul Forecast_And_Scraping setzt sich aus einem Pythonserver und einer MongoDB zusammen. Die Hauptaufgaben dieses Moduls liegen in der Datenbeschaffung und der Prognose von Zeitreihen. Die Datenbeschaffung setzt sich aus zwei Teilen zusammen. Zum einen werden Daten aus der Elvira Datenbank per Webscraper abgerufen und zum anderen werden Daten der Bundesbank per REST-Schnittstellen eingebunden. Diese Datenabrufe geschehen immer nachts um eins(UTC). Der Prozess des Scraper kann bis zu drei Stunden betragen, weshalb die Anfragen gleichmäßig über die Woche verteilt werden.Um für jede Zeitreihe, die im System liegt, eine Prognosemöglichkeit zu haben, wird direkt beim Abruf der Daten ein neues Sarima Modell berechnet. Dieses Modell wird anschließend als binärer String (Base64) in der MongoDB persistent gespeichert. Hierdurch gehen keinerlei Moellinformationen verloren, auch wenn Änderungen am Server vorgenommen werden müssen. Für die Erstellung des Servers beziehungsweise der Schnittstellen verwenden wir FastAPI und Uvicorn.
+Das Softwaremodul Forecast_And_Scraping setzt sich aus einem Pythonserver und einer MongoDB zusammen. Die Hauptaufgaben dieses Moduls liegen in der Datenbeschaffung und der Prognose von Zeitreihen. Die Datenbeschaffung setzt sich aus zwei Teilen zusammen. Zum einen werden Daten aus der Elvira Datenbank per Webscraper abgerufen und zum anderen werden Daten der Bundesbank per REST-Schnittstellen eingebunden. Diese Datenabrufe geschehen jede Nacht um ein Uhr (UTC). Der Prozess des Scrapers kann bis zu drei Stunden betragen, weshalb die Anfragen gleichmäßig über die Woche verteilt werden. Um für jede Zeitreihe, die im System liegt, eine Prognosemöglichkeit zu haben, wird direkt beim Abruf der Daten ein neues Sarima Modell berechnet. Dieses Modell wird anschließend als binärer String (Base64) in der MongoDB persistent gespeichert. Hierdurch gehen keinerlei Modellinformationen verloren, auch wenn Änderungen am Server vorgenommen werden müssen. Für die Erstellung des Servers beziehungsweise der Schnittstellen verwenden wir FastAPI und Uvicorn.
 
 ## API Dokumentation
-Wir verwenden für die Dokumentation von API´s Swagger. Wenn die Instanz läuft, kann diese Doku unter _http://localhost:8000/docs_ aufgerufen werden.
+Wir verwenden für die Dokumentation der API Swagger. Wenn die Instanz läuft, kann diese Doku unter _http://localhost:8000/docs_ aufgerufen werden.
 
-## App
-
-### DB
-#### MongoDB.py
+## DB
+### MongoDB.py
 
 ---
 #### `add_model(name,model,last_timestamp,params)`
@@ -28,8 +26,8 @@ Ruft das Modell aus der Datenbank ab.
 
 <br>
 
-### Forecast
-#### DateHandler.py
+## Forecast
+### DateHandler.py
 ---
 #### `getTimeLine(model_name)`
 Rückgabe der Zeitleiste für die Prdicion-Struktur.
@@ -48,7 +46,7 @@ Rückgabe der Zeitleiste für die Prdicion-Struktur.
 
 <br>
 
-#### Sarima.py
+### Sarima.py
 ---
 #### `calculate_sarima_modell(time_range,y_data,model_name,custom=False,params={})`  
 Name of the model used to retrieve information.
@@ -151,7 +149,7 @@ Berechnung von acf und pacf
 
 <br>
 
-### Bundesbank.py
+### DataHandler.py
 #### `parsing_csv(path)`
 Wandelt csv-Daten in eine Json-Datei um. Löst auch das Senden der Daten und die Berechnung der Sarima-Modelle aus.
 
@@ -183,7 +181,73 @@ Ausgangsdaten laden.
 
 <br>
 
-### Server.py
+### ScrapingElvira.py
+#### `go_through_list(start_at)`
+Iteration durch Themen.
+
+- **Parameter:**
+   - **start_at (int):** Der Pfad zu einer gegebenen csv-Datei.
+
+---
+#### `start_scraping(step)`
+Initialisierung des Scrapers, Anmeldung und Startvorgang.
+
+---
+
+#### `get_left_root()`
+Gibt das Startelement der linken Root zurück.
+
+- **Returntype:**     
+    - **Object**
+---
+
+#### `get_middle_root()`
+Gibt das Startelement der mnittleren Root zurück.
+
+- **Returntype:**     
+    - **Object**
+---
+
+#### `get_right_root()`
+Gibt das Startelement der rechten Root zurück.
+
+- **Returntype:**     
+    - **Object**
+---
+
+#### `run_through_left_side(stepInto,step)`
+Geht durch den linken Baum.
+
+- **Parameter:**
+    - **stepInto (String):** Ebene.
+    - **step (Integer):** Schritt.
+    - **parent_text (String):** Beschreibungstext.
+---
+
+#### `run_through_mid(stepInto,step,parent_text="")`
+Geht durch den linken Baum.
+
+- **Parameter:**
+    - **stepInto (String):** Ebene.
+    - **step (Integer):** Schritt.
+---
+
+#### `go_to_download()`
+Wechselt zur Download-Seite.
+
+---
+
+#### `download_and_step_back()`
+Löst das Herunterladen aus und kehrt zur Hauptseite zurück.
+
+---
+
+#### `get_table_data()`
+Lädt die Dateneinträge herunter und verarbeitet die Daten.
+
+---
+
+## Server.py
 #### `GET loadInitData`  
 Ausgangsdaten laden.
 
