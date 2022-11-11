@@ -1,6 +1,9 @@
 # Forecast and Scraping
 Das Softwaremodul Forecast_And_Scraping setzt sich aus einem Pythonserver und einer MongoDB zusammen. Die Hauptaufgaben dieses Moduls liegen in der Datenbeschaffung und der Prognose von Zeitreihen. Die Datenbeschaffung setzt sich aus zwei Teilen zusammen. Zum einen werden Daten aus der Elvira Datenbank per Webscraper abgerufen und zum anderen werden Daten der Bundesbank per REST-Schnittstellen eingebunden. Diese Datenabrufe geschehen immer nachts um eins(UTC). Der Prozess des Scraper kann bis zu drei Stunden betragen, weshalb die Anfragen gleichmäßig über die Woche verteilt werden.Um für jede Zeitreihe, die im System liegt, eine Prognosemöglichkeit zu haben, wird direkt beim Abruf der Daten ein neues Sarima Modell berechnet. Dieses Modell wird anschließend als binärer String (Base64) in der MongoDB persistent gespeichert. Hierdurch gehen keinerlei Moellinformationen verloren, auch wenn Änderungen am Server vorgenommen werden müssen. Für die Erstellung des Servers beziehungsweise der Schnittstellen verwenden wir FastAPI und Uvicorn.
 
+## API Dokumentation
+Wir verwenden für die Dokumentation von API´s Swagger. Wenn die Instanz läuft, kann diese Doku unter _http://localhost:8000/docs_ aufgerufen werden.
+
 ## App
 
 ### DB
