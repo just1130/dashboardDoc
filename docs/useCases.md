@@ -15,7 +15,7 @@ Möchte sich der Nutzer wieder abmelden, so findet er rechts oben der Logout-But
 
 
 ### Seiten Verwaltung
-![SeitenVerwaltung](..Data/Seiten%20erstellen%2C%20bearbeiten.gif)
+![SeitenVerwaltung](https://github.com/just1130/dashboardDoc/blob/main/Data/Seiten%20erstellen%2C%20bearbeiten.gif)
 
 
 ## Dashboardseite 
