@@ -13,8 +13,8 @@ Diese Methode verwaltet den Prozess für die Erstellung eines Nutzers.
 - **Parameter:**
     - **req** (Object):  request body 
     - **res** (Object):  response body
----
 
+---
 #### `signin(req,res) `
 In dieser Methode wird der Login Prozess verwaltet.
 
@@ -31,7 +31,8 @@ Diese Methode validiert den Token eines Nutzers.
 
 - **Returntype:** 
     - bool
----
+
+<br>
 
 ### dateParser.js
 In diesem Modul wird das Format des Datums angepasst.
@@ -46,6 +47,7 @@ Diese Methode bekommt ein Datenset mit invaliden Monatsdaten übergeben, um dies
     - dataset 
 - **Returns:** 
     - konvertierter Datensatz
+
 ---
 #### `convertQuarterDataToIsoFormat(dataset)`
 Diese Methode bekommt ein Datenset mit invalden Quartalsdaten übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
@@ -56,6 +58,7 @@ Diese Methode bekommt ein Datenset mit invalden Quartalsdaten übergeben, um die
     - dataset 
 - **Returns:** 
     - konvertierter Datensatz
+
 ---
 #### `convertYearDataToIsoFormat(dataset)`
 Diese Methode bekommt ein Datenset mit invaliden Jahresdaten übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
@@ -67,6 +70,7 @@ Diese Methode bekommt ein Datenset mit invaliden Jahresdaten übergeben, um dies
 - **Returns:** 
     - konvertierter Datensatz
 
+<br>
 
 ### kpiCalculation.js  
 ---
@@ -80,7 +84,8 @@ Diese Methode berechnet für eine übergebene Zeitreihe eine Kennzahl, die entwe
     - double 
 - **Returns:** 
     - berechnete Kennzahl
----
+
+<br>
 
 ## Middlewares    
 Spezifische Middleware Komponenten für die Authentifizierung und Erstellung von Nutzern.
@@ -105,7 +110,7 @@ Prüft ob ein Nutzer über die Adminrechte verfügt und gibt falls nicht eine en
     - **res** (Object): Response Body
     - **next** (TODO): express.NextFunction
 
-
+<br>
 
 ### verifySignUp.js     
 In diesem Modul wird beim Erstellen eines neuen Nutzers geprüft, ob die angegebene E-mail Adresse schon im System existiert.
@@ -119,6 +124,7 @@ Diese Methode prüft, ob eine E-mail Adresse schon im System existiert.
     - **res** (Object): Response Body
     - **next** (TODO): express.NextFunction
 
+<br>
 
 ## Mongoose  
 Enthält alle Schemas Definitionen für die MongoDB.
@@ -130,6 +136,8 @@ Beschreibt das Schema der Seiten für die MongoDB.
 Beschreibt das Schema der Tabellen für die MongoDB.
 ### User.js   
 Beschreibt das Schema der Nutzer für die MongoDB.
+
+<br>
 
 ## Router  
 
@@ -153,6 +161,7 @@ Erstellt clientseitig einen Cookie, falls der User authorisiert ist.
     - **req** (Object): Request Body
     - **res** (Object): Response Body
 
+<br>
 
 #### db.js
 Konfiguration der Schnittstellen für die Dateninteraktion.
@@ -164,6 +173,7 @@ Prüft, ob der Nutzer authorisiert ist.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET getEntries`  
 Gibt alle Tabellen zurück.
@@ -171,6 +181,7 @@ Gibt alle Tabellen zurück.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET getUsers`  
 Gibt alle Nutzer zurück.
@@ -178,6 +189,7 @@ Gibt alle Nutzer zurück.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET deleteUser`  
 Löscht einen übergebenen Nutzer.
@@ -185,6 +197,7 @@ Löscht einen übergebenen Nutzer.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET getEntry`  
 Liefert eine Zeitreihe oder eine Kennzahl zu einem bestimmten Tabellennamen zurück.
@@ -192,6 +205,7 @@ Liefert eine Zeitreihe oder eine Kennzahl zu einem bestimmten Tabellennamen zur�
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET getLastTimestamp`  
 Liefert den jüngsten Zeitstempel einer Tabelle zu einem bestimmten Tabellennamen zurück.
@@ -199,6 +213,7 @@ Liefert den jüngsten Zeitstempel einer Tabelle zu einem bestimmten Tabellenname
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET getAllTableNames`  
 Liefert die Tabellennamen von allen Tabellen zurück.
@@ -206,6 +221,7 @@ Liefert die Tabellennamen von allen Tabellen zurück.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET getTableNamesByTimeRange`  
 Liefert die Tabellennamen von allen Tabellen nach Zeitraum (Monat, Quartal, Jahr) gefiltert zurück.
@@ -213,6 +229,7 @@ Liefert die Tabellennamen von allen Tabellen nach Zeitraum (Monat, Quartal, Jahr
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `POST insertEntry`  
 Let eine Zeitreihe und ihre PArameter an.
@@ -220,6 +237,7 @@ Let eine Zeitreihe und ihre PArameter an.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `POST addSite`  
 Erstellt eine Seite an.
@@ -227,14 +245,7 @@ Erstellt eine Seite an.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
----
 
-##### `GET getSite`  
-Gibt alle Seiten zurück. Falls ein Seitenname übergeben wurde, nur eine bestimmte Seite.
-
-- **Parameter:**
-    - **req** (Object): Request Body
-    - **res** (Object): Response Body
 ---
 ##### `GET getSite`  
 Gibt alle Seiten zurück. Falls ein Seitenname übergeben wurde, nur eine bestimmte Seite.
@@ -242,6 +253,15 @@ Gibt alle Seiten zurück. Falls ein Seitenname übergeben wurde, nur eine bestim
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
+---
+##### `GET getSite`  
+Gibt alle Seiten zurück. Falls ein Seitenname übergeben wurde, nur eine bestimmte Seite.
+
+- **Parameter:**
+    - **req** (Object): Request Body
+    - **res** (Object): Response Body
+
 ---
 ##### `GET editSite`  
 Ersetzt bisherigen Seitenname einer Seite mit einem neuen Seitenname.
@@ -249,6 +269,7 @@ Ersetzt bisherigen Seitenname einer Seite mit einem neuen Seitenname.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
+
 ---
 ##### `GET deleteSite`  
 Löscht alle Seiten. Falls ein Seitenname übergeben wurde, wird nur die letzte Seite gelöscht.
@@ -256,15 +277,15 @@ Löscht alle Seiten. Falls ein Seitenname übergeben wurde, wird nur die letzte 
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
----
 
+<br>
 
 ### index.js  
 Deckt allgemeine Middleware Funktionen ab.
 
+<br>
 
-
-### app.js
+#### app.js
 Initialer Start des Servers und Einstellung aller notwendigen Parameter.
 
 
