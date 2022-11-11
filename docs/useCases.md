@@ -5,11 +5,11 @@ Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgef√
 ## Basics
 
 ### Login & Logout   
-![Login Logout](https://github.com/just1130/dashboardDoc/blob/main/Data/Login%20%26%20Logout.gif)   
+![Login Logout](Data/Login%20%26%20Logout.gif)   
 
 
 ### Seiten Verwaltung
-![SeitenVerwaltung](https://github.com/just1130/dashboardDoc/blob/main/Data/Seiten%20erstellen%2C%20bearbeiten.gif)
+![SeitenVerwaltung](..Data/Seiten%20erstellen%2C%20bearbeiten.gif)
 
 
 ## Dashboardseite 
