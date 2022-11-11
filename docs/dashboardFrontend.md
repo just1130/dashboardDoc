@@ -1,7 +1,7 @@
 # Frontend 
 Das Softwaremodul DashboardFrontend besteht aus einem React Frontend. Somit stellt dieses Modul das Userinterface unseres Systems dar. Insgesamt werden in diesem Modul die visuellen Möglichkeiten für die Betrachtung der Daten, die Erstellung von Reports, die Userverwaltung und die Anpassung von Prognosen abgebildet.
 
-Wir starten in der Ordnersturktur
+Wir starten in der Ordnerstruktur
 dashboardFrontend -> dashboard -> src
 
 ## Components
@@ -13,7 +13,7 @@ Logik und Darstellung der Prognose Diagramme auf der Prognose Seite.
 
 ---
 ##### `getData(data)`
-Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
+Ruft die Datenreihen gefiltert nach Namen, Anfang und Ende ab.
 
 - **Parameter:**
   - **data** (Object): Datenreihen des Modells.
@@ -25,7 +25,7 @@ Logik und Darstellung der Flächendiagramme.
 
 ---
 ##### `getData(data)`
-Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
+Ruft die Datenreihen gefiltert nach Namen, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
@@ -37,7 +37,7 @@ Logik und Darstellung der Balkendiagramme.
 
 ---
 ##### `getData(data)`
-Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
+Ruft die Datenreihen gefiltert nach Namen, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
@@ -49,7 +49,7 @@ Logik und Darstellung der Liniendiagramme.
 
 ---
 ##### `getData(data)`
-Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
+Ruft die Datenreihen gefiltert nach Namen, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
@@ -61,7 +61,7 @@ Logik und Darstellung der Streudiagramme.
 
 ---
 ##### `getData(data)`
-Ruft die Datenreihen gefiltert nach Name, Anfang und Ende ab.
+Ruft die Datenreihen gefiltert nach Namen, Anfang und Ende ab.
 
 - **Parameter:**
     - **data** (Object): Datenreihen des Modells.
@@ -126,7 +126,7 @@ Neue Elemente nach Texteingabe speichern.
 <br>
 
 #### StepFour.jsx
-Im vierten Schritt werden die Datenreihen ausgesucht, Kurzbeschreibung beigefügt,  Zeitfilter angepasst (optinal) und entschieden ob die Datenreihe prognostiziert werden soll.
+Im vierten Schritt werden die Datenreihen ausgesucht, Kurzbeschreibung beigefügt, Zeitfilter angepasst (optional) und entschieden, ob die Datenreihe prognostiziert werden soll.
 
 ---
 ##### `onBeforeRender()`
@@ -210,7 +210,7 @@ Sendet den neuen Benutzer an das NodeJS Backend.
 
 ---
 #### `validatedEmail()`
-Validiert die E-Mail Adresse. 
+Validiert die E-Mail-Adresse. 
 
 ---
 #### `validatedPw()`
@@ -234,7 +234,7 @@ In dieser Methode wird geprüft, ob schon eine Seite mit dem übergebenem Seiten
 - **Returntyp:**
     - Bool
 - **Returns:** 
-    - Gibt zurück ob eine Seite mit diesem Namen schon existiert.
+    - Gibt zurück, ob eine Seite mit diesem Namen schon existiert.
 
 <br>
 
@@ -310,7 +310,7 @@ Prüft, ob schon eine Seite mit dem übergebenem Seitennamen existiert.
 - **Returntyp:**
     - Bool
 - **Returns:** 
-    - Gibt zurück ob eine Seite mit diesem Namen schon existiert
+    - Gibt zurück, ob eine Seite mit diesem Namen schon existiert
 
 <br>
 
@@ -355,7 +355,7 @@ Klappt die Sidebar ein.
 
 ---
 #### `changeSite ()`
-Wechselt die Ansicht des Dashboards auf eine übergebene Seite und aktualisert die Elemente. 
+Wechselt die Ansicht des Dashboards auf eine übergebene Seite und aktualisiert die Elemente. 
 
 - **Parameter:**
     - **siteName** (String): Seitenname 
@@ -394,7 +394,7 @@ Aktualisiert die Seiten der der Sidebar.
 
 ---
 #### `updateAdminElements(siteName)`
-Ruft die Daten der einzelnen Kachlen der zu ladenden Seite ab.
+Ruft die Daten der einzelnen Kacheln der zu ladenden Seite ab.
 
 - **Parameter:**
     - **siteName**(String):  Name der zu ladenden Seite.
@@ -412,7 +412,7 @@ Logik und Design der Adminseite.
 Wählt die erste Seite aus. Ist keine Seite vorhanden, wird der Nutzer dazu aufgefordert eine neue Seite zu erstellen.
 
 - **Parameter:**
-    - **body** (Object):Alle Seiten. 
+    - **body** (Object): Alle Seiten. 
     
 ---
 #### `addNewElement()`
@@ -475,12 +475,12 @@ Sendet die Client Daten an das Backend.
 
 ---
 #### `validated()`
-Überprüft das Format der E-Mail Adresse.
+Überprüft das Format der E-Mail-Adresse.
 
 - **Returntyp:**
     - Bool
 - **Returns:**
-    - Gibt zurück, ob das Format der E-Mail Adresse gültig ist.
+    - Gibt zurück, ob das Format der E-Mail-Adresse gültig ist.
     
 ---
 #### `closeDialog()`

@@ -52,7 +52,7 @@ Diese Methode bekommt ein Datenset mit invaliden Monatsdaten übergeben, um dies
 
 ---
 #### `convertQuarterDataToIsoFormat(dataset)`
-Diese Methode bekommt ein Datenset mit invalden Quartalsdaten übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
+Diese Methode bekommt ein Datenset mit invaliden Quartalsdaten übergeben, um diese anschließend in ein ISO Format zu konvertieren und zurückzugeben.
 
 - **Parameter:**
     - **dataset** (Object): Zeitreihen
@@ -93,11 +93,11 @@ Diese Methode berechnet für eine übergebene Zeitreihe eine Kennzahl, die entwe
 Spezifische Middleware Komponenten für die Authentifizierung und Erstellung von Nutzern.
 
 ### authJwt.js   
-In diesem Modul wird geprüft, ob ein Nutzer die Adminrechte besitzt und authorisiert ist.
+In diesem Modul wird geprüft, ob ein Nutzer die Adminrechte besitzt und autorisiert ist.
 
 ---
 #### `verifyToken(req,res,next)`
-Prüft ob ein Nutzer authorisiert ist und gibt falls nicht eine entsprechende Meldung aus.
+Prüft ob ein Nutzer autorisiert ist und gibt falls nicht eine entsprechende Meldung aus.
 
 - **Parameter:**
     - **req** (Object): Request Body
@@ -115,11 +115,11 @@ Prüft ob ein Nutzer über die Adminrechte verfügt und gibt falls nicht eine en
 <br>
 
 ### verifySignUp.js     
-In diesem Modul wird beim Erstellen eines neuen Nutzers geprüft, ob die angegebene E-mail Adresse schon im System existiert.
+In diesem Modul wird beim Erstellen eines neuen Nutzers geprüft, ob die angegebene E-Mail-Adresse schon im System existiert.
 
 ---
 #### `checkDuplicateEmail(req,res,next)`
-Diese Methode prüft, ob eine E-mail Adresse schon im System existiert.
+Diese Methode prüft, ob eine E-Mail-Adresse schon im System existiert.
 
 - **Parameter:**
     - **req** (Object): Request Body
@@ -146,7 +146,7 @@ Beschreibt das Schema der Nutzer für die MongoDB.
 ### Routes  
 
 #### auth.js   
-Konfiguration der Schnittstellen für die Athentifizierung.
+Konfiguration der Schnittstellen für die Authentifizierung.
 
 ---
 ##### `POST signUp`  
@@ -157,7 +157,7 @@ Diese Methode erstellt einen neuen Nutzer.
     - **res** (Object): Response Body
 ---
 ##### `POST signIn`  
-Erstellt clientseitig einen Cookie, falls der User authorisiert ist.
+Erstellt clientseitig einen Cookie, falls der User autorisiert ist.
 
 - **Parameter:**
     - **req** (Object): Request Body
@@ -170,7 +170,7 @@ Konfiguration der Schnittstellen für die Dateninteraktion.
 
 ---
 ##### `GET isAuth`  
-Prüft, ob der Nutzer authorisiert ist.
+Prüft, ob der Nutzer autorisiert ist.
 
 - **Parameter:**
     - **req** (Object): Request Body
@@ -218,7 +218,7 @@ Liefert den jüngsten Zeitstempel einer Tabelle zu einem bestimmten Tabellenname
 
 ---
 ##### `GET getAllTableNames`  
-Liefert die Tabellennamen von allen Tabellen zurück.
+Liefert die Tabellennamen aller Tabellen zurück.
 
 - **Parameter:**
     - **req** (Object): Request Body
@@ -234,7 +234,7 @@ Liefert die Tabellennamen von allen Tabellen nach Zeitraum (Monat, Quartal, Jahr
 
 ---
 ##### `POST insertEntry`  
-Let eine Zeitreihe und ihre PArameter an.
+Let eine Zeitreihe und ihre Parameter an.
 
 - **Parameter:**
     - **req** (Object): Request Body

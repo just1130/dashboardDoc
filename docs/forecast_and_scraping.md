@@ -30,7 +30,7 @@ Ruft das Modell aus der Datenbank ab.
 ### DateHandler.py
 ---
 #### `getTimeLine(model_name)`
-Rückgabe der Zeitleiste für die Prdicion-Struktur.
+Rückgabe der Zeitleiste für die Prdiction-Struktur.
 
 - **Parameter:**
     - **start_date (String):** Beginn der Zeitleiste.
@@ -49,7 +49,7 @@ Rückgabe der Zeitleiste für die Prdicion-Struktur.
 ### Sarima.py
 ---
 #### `calculate_sarima_modell(time_range,y_data,model_name,custom=False,params={})`  
-Name of the model used to retrieve information.
+Name des Modells, das zum Abrufen von Informationen verwendet wird.
 
 - **Parameter:**
     - **time_range (String):** Zeitintervall.
@@ -202,7 +202,7 @@ Gibt das Startelement der linken Root zurück.
 ---
 
 #### `get_middle_root()`
-Gibt das Startelement der mnittleren Root zurück.
+Gibt das Startelement der mittleren Root zurück.
 
 - **Returntype:**     
     - **Object**

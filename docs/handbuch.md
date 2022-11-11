@@ -1,13 +1,13 @@
 # Handbuch
-Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgeführt und beschrieben. Funktionen des Dashboards stehen nur dann zur Verfügung, wenn man sich im System [angemeldet hat](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#login-logout). Ist man nicht angemeldet, hat man die Möglichkeit die verschiedenen [Dashboardseiten](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#dashboardseite) zu betrachten.
+Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgeführt und beschrieben. Funktionen des Dashboards stehen nur dann zur Verfügung, wenn man sich im System [angemeldet hat](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#login-logout). Ist man nicht angemeldet, hat man die Möglichkeit die verschiedenen [Dashboard-Seiten](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#dashboardseite) zu betrachten.
 
 
 ## Basics
 In diesem Abschnitt werden die An- und Abmelde-Abläufe, sowie die Seitenverwaltung vorgestellt.
 
 ### Login & Logout   
-Um sich auf einer Seite anzumelden, muss der Nutzer zuvor von einem Administrator hinterlegt worden sein. Ist der Nutzer bereits im System hinterlegt, kann er sich mit seiner E-Mail Adresse und dem dazugehörigen Passwort anmelden. Ist er angemeldet, hat er Zugang zu den verschiedenen Funktionen als Administrator. Hierzu gehören beispielsweise das Erstellen neuer Dashboardseiten, Anpassen der Prognosen oder Verwalten von Nutzern.
-Möchte sich der Nutzer wieder abmelden, so findet er rechts oben den Logout-Button. Ist der Nutzer abgemeldet, so hat er nur noch Zugang zur öffentlichen Seite des Dashboards, welche verschiedene Dashboardseiten mit den dazugehörigen Kacheln visualisiert.
+Um sich auf einer Seite anzumelden, muss der Nutzer zuvor von einem Administrator hinterlegt worden sein. Ist der Nutzer bereits im System hinterlegt, kann er sich mit seiner E-Mail-Adresse und dem dazugehörigen Passwort anmelden. Ist er angemeldet, hat er Zugang zu den verschiedenen Funktionen als Administrator. Hierzu gehören beispielsweise das Erstellen neuer Dashboard-Seiten, Anpassen der Prognosen oder Verwalten von Nutzern.
+Möchte sich der Nutzer wieder abmelden, so findet er rechts oben den Logout-Button. Ist der Nutzer abgemeldet, so hat er nur noch Zugang zur öffentlichen Seite des Dashboards, welche verschiedene Dashboard-Seiten mit den dazugehörigen Kacheln visualisiert.
 
 ![Login Logout](./Data/Login & Logout.gif)   
 
@@ -20,16 +20,16 @@ In der Sidebar hat der Nutzer die Möglichkeit neue Seiten zu erstellen, indem e
 
 <br>
 
-## Dashboardseite 
-### Dashboardseite Basic  
-Auf dieser Seite kann der Nutzer zwischen den verschiedenen Dashboardseiten wählen.
+## Dashboard-Seite 
+### Dashboard-Seite Basic  
+Auf dieser Seite kann der Nutzer zwischen den verschiedenen Dashboard-Seiten wählen.
 
-![Screenshot der Dashboardseite](./Data/Screenshot%20Dashboard.png) 
+![Screenshot der Dashboard-Seite](./Data/Screenshot%20Dashboard.png) 
 
 <br>
 
-## Adminseite
-Auf der Admninseite hat man die Möglichkeit Kacheln zu erstellen, zu bearbeiten oder zu löschen. Möchte man eine neue Kachel erstellen, so kann man im ersten Schritt einen Titel wählen und festlegen, ob es sich um Monats-, Quartals- oder Jahresdaten handelt. Im zweiten Schritt kann der Nutzer entscheiden, ob ein Freitext, Kennzahl, oder Diagramm erstellt werden soll:
+## Admin-Seite
+Auf der Admin-Seite hat man die Möglichkeit Kacheln zu erstellen, zu bearbeiten oder zu löschen. Möchte man eine neue Kachel erstellen, so kann man im ersten Schritt einen Titel wählen und festlegen, ob es sich um Monats-, Quartals- oder Jahresdaten handelt. Im zweiten Schritt kann der Nutzer entscheiden, ob ein Freitext, Kennzahl, oder Diagramm erstellt werden soll:
 
 
 ### Freitext erstellen
