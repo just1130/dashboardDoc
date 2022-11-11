@@ -1,6 +1,5 @@
 # Dynamic Dashboard
-Dieses NodeJS Backend bietet über REST Schnittstellen Funktionen an, um Nutzer zu verwalten, Login-Prozesse zu authentifizieren. Desweiteren findet hier die Dateninteraktion mit dem Frontend statt. Im Folgenden werden die einzelnen Unter-Ordner, Module und Dateien in diesem Zusammenhang vorgestellt. 
-
+Das Softwaremodul DynamicDashboard setzt sich aus einem NodeJS Server und einer MongoDB zusammen. Die Hauptaufgaben des Moduls sind die Verwaltung von Zeitreihen, das speichern von Veränderung im Frontend(z. B. Anlegen einer neuen Seite) und das steuern der Login und Authentifizierungsprozesse. Unser NodeJS Modul nutzt das express Framework, welches die Erstellung von Webschnittstellen ermöglicht. Für die Authentifizierung haben wir auf ein Verfahren gesetzt, welches an die Oauth Prozedur angelehnt ist und folgendermaßen funktioniert: Ein User muss für den Login seine Anmeldedaten an den Backendserver übertragen. Dieser antwortet entweder mit einer Fehlermeldung oder aber mit dem erstellen eines httpOnly-Cookies, welcher nicht durch clientseitiges JS abgegriffen werden kann. Durch den Cookie bleibt der User für die Dauer seiner Session somit authentifiziert.
 
 ## Helper
 ### auth.js
