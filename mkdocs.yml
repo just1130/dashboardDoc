@@ -5,8 +5,8 @@ theme: readthedocs
 docs_dir: 'docs'
 nav:
     - 'Introduction': 'index.md'
-    - 'useCase' : 'useCases.md'
-    - 'forecast_and_scraping' : 'forecast_and_scraping.md'
-    - 'dynamicDashboard' : 'dynamicDashboard.md'
-    - 'dashboardFrontend' : 'dashboardFrontend.md'
+    - 'Handbuch' : 'handbuch.md'
+    - 'Forecast_and_scraping' : 'forecast_and_scraping.md'
+    - 'DynamicDashboard' : 'dynamicDashboard.md'
+    - 'DashboardFrontend' : 'dashboardFrontend.md'
 
