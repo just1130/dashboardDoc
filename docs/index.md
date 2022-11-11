@@ -1,16 +1,3 @@
-
-
-# Dashboard Bauindustrie Deutschland
-
-
-Diese ReadMe enthält eine ausführliche Anleitung zur Installation des Projekts. Des Weiteren ermöglicht sie dem Leser einen ersten Überblick über den Aufbau des Projekts, welches hauptsächlich aus 3 verschiedenen Unterordnern besteht:
-
-- [dashboard Frontend]()
-- [dashboard Backend]() 
-- [Prognose und Scraping Backend]()
-
-Eine genauere Dokumentation über die jeweiligen Unterordnern finden Sie in der dazugehörigen Seite. 
-
 ## Problemstellung des Projekts
 Die Erstellung von Konjunktur-, Struktur- und Marktanalysen sind für Bauunternehmen Grundlage für wichtige Unternehmensentscheidungen, betreffend Einkauf, über Investitionen und Projekte. Viele Kennzahlen in diesen Bereichen werden schon öffentlich erfasst und von den Unternehmen auch abgefragt. Die Interpretation und Darstellung gestalteten sich allerdings, vor allem über viele Quellen hinweg, bisher schwierig.
 So auch beim Hauptverband der deutschen Bauindustrie, dem Kooperationspartner dieses Projekts. Dieser erstellt bisher händisch Berichte zu aktuellen Zahlen und Fakten aus der Bauindustrie. Zum Beispiel zur Baukonjunktur, zur Bauwirtschaft oder zum Arbeitsmarkt. Die Zielgruppe sind dabei Manager deutscher Bauunternehmen & die Mitglieder des Verbandes. 
@@ -33,32 +20,37 @@ Außerdem haben wir einige Rahmenbedingen und Kriterien definiert, um dieses Zie
 - Möglichkeit zur Erstellung von Zeitreihen Prognosen, auf Basis der eingebundenen Daten
 - Möglichkeit zur Veröffentlichung von Seiten durch Administratoren
 
-## Installation
+# Starten der Applikation
+Unser Softwaresystem wird aktuell über Github verwaltet und setzt auf eine Microservicearchitektur. Aufgrund dieser Architekturentscheidung setzten wir zudem auf eine Containerisierung der Module. Dies geschieht durch den Einsatz von Docker. Aus diesen Gründen ergeben sich die nachfolgenden notwendigen Schritte, um die Applikation zu starten.
 
-### 1. Einrichtung von Docker
-so richten sie sich die Docker ein
+## **Vorraussetzungen**
 
-`Terminal Befehle hier einsetzen ` 
+Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker) zu installieren. Der Link zur Anwendung: [_https://www.docker.com/products/docker-desktop/_](https://www.docker.com/products/docker-desktop/).
+
+## **Download des Projekts**
+
+1. Clonen des Repositories:    
+    - `(git clone https://github.com/just1130/DashboardBauindustrieDeutschland.git)`
+    - In dem Ordner DashboardBauindustrieDeutschland liegt eine .env Datei hier können das PW und die Email für die Elvira hinterlegt werden (optional).
+    - Der Scraper läuft jede Nacht um 3 Uhr MEZ, das System läuft zunächst mit Initialdaten(siehe unten).
+    - Solltet ihr den Scraper testen wollen, meldet euch bitte in Slack, dann senden wir euch das PW und die Email privat zu.
+
+## **Start des Systems**
+
+2. Per Terminal in den Ordner **DashboardBauindustrieDeutschland** navigieren
+    - hier liegt eine Docker-Compose Datei
+3. Im Terminal folgenden Befehl eingeben:   
+    - `docker-compose up --build`
+    - Der Prozess wird gestartet und kann je nach System bis zu 10 Minuten in Anspruch nehmen
+4. Nachdem alle Server gestartet wurden, kann über die folgende URL der Prozess für eine initiale Beladung gestartet werden [_http://localhost:8000/loadInitData_](http://localhost:8000/loadInitData)
+    - Durch den Aufruf der Route werden initiale Daten geladen, verarbeitet und Prognosemodelle für diese abgelegt.
+    - Der Prozess kann im Hintergrund weiterlaufen und das System kann sofort genutzt werden.
 
 
-### 2. Klonen des Git Repos
-So richten sie die Git Repos ein: 
+## **Nutzung des Systems**
 
-`Terminal Befehle hier einsetzen ` 
-
-### 3. Downloaden von bereits gescrapte Daten
-Da die Verwendung des Dashboards Daten benötigt, und der Bauverband leider keine API benutzt wurde ein Scraper verwendet mit welchem die Daten auf der 
-
-`Terminal Befehle hier einsetzen ` 
-
-### 
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-```
-
+- Das Userinterface ist über die folgende URL erreichbar [_http://localhost:3001_](http://localhost:3001)
+- Beim ersten Start des Systems wird ein default User angelegt 
+    - Email: admin@bauverband.de
+    - Password: admin
+    - Der Nutzer kann nach dem ersten Login gelöscht werden und durch einen neuen Nutzer ersetzt werden (Siehe Handbuch)
