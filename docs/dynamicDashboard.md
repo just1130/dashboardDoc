@@ -100,7 +100,7 @@ Prüft ob ein Nutzer authorisiert ist und gibt falls nicht eine entsprechende Me
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
-    - **next** (TODO): express.NextFunction
+    - **next** (Function): express.NextFunction
 ---
 #### `isAdmin(req, res, next)`
 Prüft ob ein Nutzer über die Adminrechte verfügt und gibt falls nicht eine entsprechende Meldung aus.
@@ -108,7 +108,7 @@ Prüft ob ein Nutzer über die Adminrechte verfügt und gibt falls nicht eine en
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
-    - **next** (TODO): express.NextFunction
+    - **next** (Function): express.NextFunction
 
 <br>
 
@@ -122,7 +122,7 @@ Diese Methode prüft, ob eine E-mail Adresse schon im System existiert.
 - **Parameter:**
     - **req** (Object): Request Body
     - **res** (Object): Response Body
-    - **next** (TODO): express.NextFunction
+    - **next** (Function): express.NextFunction
 
 <br>
 
