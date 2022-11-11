@@ -2,7 +2,7 @@
 Das Softwaremodul DynamicDashboard setzt sich aus einem NodeJS Server und einer MongoDB zusammen. Die Hauptaufgaben des Moduls sind die Verwaltung von Zeitreihen, das speichern von Veränderung im Frontend(z. B. Anlegen einer neuen Seite) und das steuern der Login und Authentifizierungsprozesse. Unser NodeJS Modul nutzt das express Framework, welches die Erstellung von Webschnittstellen ermöglicht. Für die Authentifizierung haben wir auf ein Verfahren gesetzt, welches an die Oauth Prozedur angelehnt ist und folgendermaßen funktioniert: Ein User muss für den Login seine Anmeldedaten an den Backendserver übertragen. Dieser antwortet entweder mit einer Fehlermeldung oder aber mit dem erstellen eines httpOnly-Cookies, welcher nicht durch clientseitiges JS abgegriffen werden kann. Durch den Cookie bleibt der User für die Dauer seiner Session somit authentifiziert.
 
 ## API Dokumentation
-Wir verwenden für die Dokumentation von API´s Swagger. Wenn die Instanz läuft, kann diese Doku unter _http://localhost:3000/docs/#/_ aufgerufen werden.
+Wir verwenden für die Dokumentation der API Swagger. Wenn die Instanz läuft, kann diese Doku unter _http://localhost:3000/docs/#/_ aufgerufen werden.
 
 ## Helper
 ### auth.js
@@ -287,7 +287,7 @@ Deckt allgemeine Middleware Funktionen ab.
 
 <br>
 
-#### app.js
+### app.js
 Initialer Start des Servers und Einstellung aller notwendigen Parameter.
 
 
