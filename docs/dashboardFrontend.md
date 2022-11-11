@@ -503,7 +503,6 @@ Aktualisert die Nutzerliste und schließt den "Nutzer hinzufügen" Dialog
 #### `getUsers()`
 Ruft alle Nutzer aus der Datenbank ab.
 
-<br>
 
 
 
