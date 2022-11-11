@@ -27,7 +27,7 @@ In der Sidebar hat der Nutzer die Möglichkeit neue Seiten zu erstellen, in dem 
 
 ## Adminseite
 ### Freitext erstellen  
-![Freitext erstellen](../Data/Freitext erstellen.gif) 
+![Freitext erstellen](https://github.com/just1130/dashboardDoc/blob/main/Data/Freitext%20erstellen.gif) 
 
 
 ### KPI erstellen
