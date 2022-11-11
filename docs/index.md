@@ -24,7 +24,7 @@ Außerdem haben wir Rahmenbedingen und Kriterien definiert, welche in diesem Pro
 ## Starten der Applikation
 Unser Softwaresystem wird aktuell über Github verwaltet und setzt auf eine Microservicearchitektur. Aufgrund dieser Architekturentscheidung, setzten wir zudem auf eine Containerisierung der Module. Dies geschieht durch den Einsatz von Docker. Aus diesen Gründen ergeben sich die nachfolgenden notwendigen Schritte, um die Applikation zu starten.
 
-## **Vorraussetzungen**
+## **Voraussetzungen**
 
 Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker) zu installieren. Der Link zur Anwendung: [_https://www.docker.com/products/docker-desktop/_](https://www.docker.com/products/docker-desktop/).
 
@@ -32,8 +32,8 @@ Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker)
 
 1. Clonen des Repositories:    
     - `(git clone https://github.com/just1130/DashboardBauindustrieDeutschland.git)`
-    - In dem Ordner DashboardBauindustrieDeutschland liegt eine .env Datei hier können das PW und die Email für die Elvira hinterlegt werden (optional).
-    - Der Scraper läuft jede Nacht um 01:00 Uhr UTC, das System läuft zunächst mit Initialdaten(siehe unten).
+    - In dem Ordner DashboardBauindustrieDeutschland liegt eine .env Datei hier können das PW und die E-Mail für die Elvira hinterlegt werden (optional).
+    - Der Scraper läuft jede Nacht um 01:00 Uhr UTC, das System läuft zunächst mit Initialdaten (siehe unten).
     - Für die Zugangsdaten des Scrapers bitten wir euch, sich an das Projektteam zu wenden.
 
 ## **Start des Systems**
@@ -42,11 +42,11 @@ Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker)
     - hier liegt eine Docker-Compose Datei
 3. Im Terminal folgenden Befehl eingeben:   
     - `docker-compose up --build`
-        - je nach git Einstellungen ändert Windows CRLF Endungen auf LF  dann taucht folgender Fehler auf: `standard_init_linux.go:228: exec user process caused: no such file or directory`
+        - je nach git Einstellungen ändert Windows CRLF Endungen auf LF dann taucht folgender Fehler auf: `standard_init_linux.go:228: exec user process caused: no such file or directory`
         - Das File start.sh in forecast_and_scraping muss dann auf LF geändert werden  
     - Der Prozess wird gestartet und kann je nach System bis zu 10 Minuten in Anspruch nehmen
 4. Nachdem alle Server gestartet wurden, kann über die folgende URL der Prozess für eine initiale Beladung gestartet werden [_http://localhost:8000/loadInitData_](http://localhost:8000/loadInitData)
-    - Durch den Aufruf der Route werden initiale Daten geladen, verarbeitet und Prognosemodelle für diese abgelegt.(Dauer circa eine Std.)
+    - Durch den Aufruf der Route werden initiale Daten geladen, verarbeitet und Prognosemodelle für diese abgelegt. (Dauer circa eine Std.)
     - Der Prozess kann im Hintergrund weiterlaufen und das System kann sofort genutzt werden.
     - Falls die Systemleistung nicht ausreichend ist, kann das forecast and scraping Modul neugestartet werden, um den Prozess abzubrechen
 
@@ -55,6 +55,6 @@ Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker)
 
 - Das Userinterface ist über die folgende URL erreichbar [_http://localhost:3001_](http://localhost:3001)
 - Beim ersten Start des Systems wird ein default User angelegt, mit dem man sich beim erstmaligem [Login](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#login-logout) anmelden kann.
-    - Email: admin@bauverband.de
+    - E-Mail: admin@bauverband.de
     - Password: admin
     - Der Nutzer kann nach dem ersten Login gelöscht werden und durch einen neuen Nutzer ersetzt werden (Siehe Handbuch)
