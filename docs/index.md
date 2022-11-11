@@ -41,6 +41,8 @@ Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker)
     - hier liegt eine Docker-Compose Datei
 3. Im Terminal folgenden Befehl eingeben:   
     - `docker-compose up --build`
+        - je nach git Einstellungen ändert Windows CRLF Endungen auf LF  dann taucht folgender Fehler auf: `standard_init_linux.go:228: exec user process caused: no such file or directory`
+        - Das File start.sh in forecast_and_scraping muss dann auf LF geändert werden  
     - Der Prozess wird gestartet und kann je nach System bis zu 10 Minuten in Anspruch nehmen
 4. Nachdem alle Server gestartet wurden, kann über die folgende URL der Prozess für eine initiale Beladung gestartet werden [_http://localhost:8000/loadInitData_](http://localhost:8000/loadInitData)
     - Durch den Aufruf der Route werden initiale Daten geladen, verarbeitet und Prognosemodelle für diese abgelegt.(Dauer circa eine Std.)
