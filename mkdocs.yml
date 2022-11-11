@@ -6,7 +6,7 @@ docs_dir: 'docs'
 nav:
     - 'Einleitung': 'index.md'
     - 'Handbuch' : 'handbuch.md'
-    - 'Forecast_and_scraping' : 'forecast_and_scraping.md'
-    - 'DynamicDashboard' : 'dynamicDashboard.md'
-    - 'DashboardFrontend' : 'dashboardFrontend.md'
+    - 'Forecast and Scraping' : 'forecast_and_scraping.md'
+    - 'Dynamic Dashboard' : 'dynamicDashboard.md'
+    - 'Dashboard Frontend' : 'dashboardFrontend.md'
 
