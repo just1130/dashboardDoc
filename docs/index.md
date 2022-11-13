@@ -24,11 +24,11 @@ Außerdem haben wir Rahmenbedingen und Kriterien definiert, welche in diesem Pro
 ## Starten der Applikation
 Unser Softwaresystem wird aktuell über Github verwaltet und setzt auf eine Microservicearchitektur. Aufgrund dieser Architekturentscheidung, setzten wir zudem auf eine Containerisierung der Module. Dies geschieht durch den Einsatz von Docker. Aus diesen Gründen ergeben sich die nachfolgenden notwendigen Schritte, um die Applikation zu starten.
 
-## **Voraussetzungen**
+### **Voraussetzungen**
 
 Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker) zu installieren. Der Link zur Anwendung: [_https://www.docker.com/products/docker-desktop/_](https://www.docker.com/products/docker-desktop/).
 
-## **Download des Projekts**
+### **Download des Projekts**
 
 1. Clonen des Repositories:    
     - `git clone https://github.com/just1130/DashboardBauindustrieDeutschland.git`
@@ -36,7 +36,7 @@ Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker)
     - Der Scraper läuft jede Nacht um 01:00 Uhr UTC, das System läuft zunächst mit Initialdaten (siehe unten).
     - Für die Zugangsdaten des Scrapers bitten wir euch, sich an das Projektteam zu wenden.
 
-## **Start des Systems**
+### **Start des Systems**
 
 2. Per Terminal in den Ordner **DashboardBauindustrieDeutschland** navigieren
     - hier liegt eine Docker-Compose Datei
@@ -51,7 +51,7 @@ Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker)
     - Falls die Systemleistung nicht ausreichend ist, kann das forecast and scraping Modul neugestartet werden, um den Prozess abzubrechen
 
 
-## **Nutzung des Systems**
+### **Nutzung des Systems**
 
 - Das Userinterface ist über die folgende URL erreichbar [_http://localhost:3001_](http://localhost:3001)
 - Beim ersten Start des Systems wird ein default User angelegt, mit dem man sich beim erstmaligem [Login](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#login-logout) anmelden kann.
