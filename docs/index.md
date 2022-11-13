@@ -37,7 +37,7 @@ Für die Ausführung des Programmes ist es notwendig, Dockerdesktop (bzw. Docker
     - Für die Zugangsdaten des Scrapers bitten wir euch, sich an das Projektteam zu wenden.
 
 ### **Start des Systems**
-2. 'End of Linesequence' anpassen:
+2. 'End of Linesequence' anpassen (optional je nach Git Einstellungen):
     - In Ordner 'forecast_and_scraping' navigieren.
     - Die Datei 'start.sh' öffnen.
     - Über den Status Balken die 'End of Linesequence' auf **'LF'** einstellen.    
