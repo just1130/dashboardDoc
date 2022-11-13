@@ -26,35 +26,35 @@ Unser Softwaresystem wird aktuell über Github verwaltet und setzt auf eine Micr
 
 ### **Voraussetzungen**
 
-Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker) zu installieren. Der Link zur Anwendung: [_https://www.docker.com/products/docker-desktop/_](https://www.docker.com/products/docker-desktop/).
+Für die Ausführung des Programmes ist es notwendig, Dockerdesktop (bzw. Docker) zu installieren. Der Link zur Anwendung: [_https://www.docker.com/products/docker-desktop/_](https://www.docker.com/products/docker-desktop/).
 
 ### **Download des Projekts**
 
 1. Clonen des Repositories:    
     - `git clone https://github.com/just1130/DashboardBauindustrieDeutschland.git`
-    - In dem Ordner DashboardBauindustrieDeutschland liegt eine .env Datei hier können das PW und die E-Mail für die Elvira hinterlegt werden (optional).
+    - Im Ordner 'DashboardBauindustrieDeutschland' ist eine .env Datei abgelegt, hier können das PW und die E-Mail für die Elvira hinterlegt werden (optional).
     - Der Scraper läuft jede Nacht um 01:00 Uhr UTC, das System läuft zunächst mit Initialdaten (siehe unten).
     - Für die Zugangsdaten des Scrapers bitten wir euch, sich an das Projektteam zu wenden.
 
 ### **Start des Systems**
 
-2. Per Terminal in den Ordner **DashboardBauindustrieDeutschland** navigieren
+2. Per Terminal in den Ordner **DashboardBauindustrieDeutschland** navigieren:
     - hier liegt eine Docker-Compose Datei
-3. Im Terminal folgenden Befehl eingeben:   
-    - `docker-compose up --build`
-        - je nach git Einstellungen ändert Windows CRLF Endungen auf LF dann taucht folgender Fehler auf: `standard_init_linux.go:228: exec user process caused: no such file or directory`
-        - Das File start.sh in forecast_and_scraping muss dann auf LF geändert werden  
-    - Der Prozess wird gestartet und kann je nach System bis zu 10 Minuten in Anspruch nehmen
-4. Nachdem alle Server gestartet wurden, kann über die folgende URL der Prozess für eine initiale Beladung gestartet werden [_http://localhost:8000/loadInitData_](http://localhost:8000/loadInitData)
-    - Durch den Aufruf der Route werden initiale Daten geladen, verarbeitet und Prognosemodelle für diese abgelegt. (Dauer circa eine Std.)
+3. 'End of Linesequence' anpassen:
+    - In Ordner 'forecast_and_scraping'
+    - Die Datei 'start.sh' öffnen
+    - Über den Status Balken die 'End of Linesequence' auf **'LF'** einstellen    
+4. Der Prozess wird gestartet und kann je nach System bis zu **10 Minuten** in Anspruch nehmen
+5. Nachdem alle Server gestartet wurden, kann über die folgende URL der Prozess für eine **initiale Beladung** gestartet werden [_http://localhost:8000/loadInitData_](http://localhost:8000/loadInitData)
+    - Durch den Aufruf der Route werden initiale Daten geladen, verarbeitet und Prognosemodelle für diese abgelegt (Dauer circa eine Std.).
     - Der Prozess kann im Hintergrund weiterlaufen und das System kann sofort genutzt werden.
-    - Falls die Systemleistung nicht ausreichend ist, kann das forecast and scraping Modul neugestartet werden, um den Prozess abzubrechen
+    - Falls die Systemleistung nicht ausreichend ist, kann das 'forecast and scraping' Modul neugestartet werden, um den Prozess abzubrechen.
 
 
 ### **Nutzung des Systems**
 
-- Das Userinterface ist über die folgende URL erreichbar [_http://localhost:3001_](http://localhost:3001)
+- Das Userinterface ist über die folgende URL erreichbar: [_http://localhost:3001_](http://localhost:3001).
 - Beim ersten Start des Systems wird ein default User angelegt, mit dem man sich beim erstmaligem [Login](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#login-logout) anmelden kann.
     - E-Mail: admin@bauverband.de
     - Password: admin
-    - Der Nutzer kann nach dem ersten Login gelöscht werden und durch einen neuen Nutzer ersetzt werden (Siehe Handbuch)
+    - Der Nutzer kann nach dem ersten Login [gelöscht](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#user-administration) werden und durch einen neuen Nutzer ersetzt werden (Siehe Handbuch).
