@@ -37,15 +37,17 @@ Für die Ausführung des Programmes ist es notwendig, Dockerdesktop (bzw. Docker
     - Für die Zugangsdaten des Scrapers bitten wir euch, sich an das Projektteam zu wenden.
 
 ### **Start des Systems**
+2. 'End of Linesequence' anpassen:
+    - In Ordner 'forecast_and_scraping' navigieren.
+    - Die Datei 'start.sh' öffnen.
+    - Über den Status Balken die 'End of Linesequence' auf **'LF'** einstellen.    
+    
+3. Per Terminal in den Ordner **DashboardBauindustrieDeutschland** navigieren:
+    - hier liegt eine Docker-Compose Datei.
+    - Im Terminal folgenden Befehl eingeben: `docker-compose up --build`
 
-2. Per Terminal in den Ordner **DashboardBauindustrieDeutschland** navigieren:
-    - hier liegt eine Docker-Compose Datei
-3. 'End of Linesequence' anpassen:
-    - In Ordner 'forecast_and_scraping'
-    - Die Datei 'start.sh' öffnen
-    - Über den Status Balken die 'End of Linesequence' auf **'LF'** einstellen    
-4. Der Prozess wird gestartet und kann je nach System bis zu **10 Minuten** in Anspruch nehmen
-5. Nachdem alle Server gestartet wurden, kann über die folgende URL der Prozess für eine **initiale Beladung** gestartet werden [_http://localhost:8000/loadInitData_](http://localhost:8000/loadInitData)
+4. Der Prozess wird gestartet und kann je nach System bis zu **10 Minuten** in Anspruch nehmen.    
+6. Nachdem alle Server gestartet wurden, kann über die folgende URL der Prozess für eine **initiale Beladung** gestartet werden: [_http://localhost:8000/loadInitData_](http://localhost:8000/loadInitData)
     - Durch den Aufruf der Route werden initiale Daten geladen, verarbeitet und Prognosemodelle für diese abgelegt (Dauer circa eine Std.).
     - Der Prozess kann im Hintergrund weiterlaufen und das System kann sofort genutzt werden.
     - Falls die Systemleistung nicht ausreichend ist, kann das 'forecast and scraping' Modul neugestartet werden, um den Prozess abzubrechen.
