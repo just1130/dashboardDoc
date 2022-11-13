@@ -31,7 +31,7 @@ Für die Ausführung des Programms ist es notwendig, Dockerdesktop (bzw. Docker)
 ## **Download des Projekts**
 
 1. Clonen des Repositories:    
-    - `(git clone https://github.com/just1130/DashboardBauindustrieDeutschland.git)`
+    - `git clone https://github.com/just1130/DashboardBauindustrieDeutschland.git`
     - In dem Ordner DashboardBauindustrieDeutschland liegt eine .env Datei hier können das PW und die E-Mail für die Elvira hinterlegt werden (optional).
     - Der Scraper läuft jede Nacht um 01:00 Uhr UTC, das System läuft zunächst mit Initialdaten (siehe unten).
     - Für die Zugangsdaten des Scrapers bitten wir euch, sich an das Projektteam zu wenden.
