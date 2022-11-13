@@ -1,5 +1,5 @@
 # Handbuch
-Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgeführt und beschrieben. Funktionen des Dashboards stehen nur dann zur Verfügung, wenn man sich im System [angemeldet hat](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#login-logout). Ist man nicht angemeldet, hat man die Möglichkeit die verschiedenen [Dashboard-Seiten](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#dashboardseite) zu betrachten.
+Auf dieser Seite werden verschiedene Funktionen des Dashboards per Video vorgeführt und beschrieben. Funktionen des Dashboards stehen nur dann zur Verfügung, wenn man sich im System [angemeldet hat](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#login-logout). Ist man nicht angemeldet, hat man die Möglichkeit die verschiedenen [Dashboard-Seiten](https://dashboard-dokumentation.readthedocs.io/en/latest/handbuch/#dashboard-seite) zu betrachten.
 
 
 ## Basics
@@ -75,11 +75,11 @@ Um eine bestimmte Kachel zu bearbeiten, kann der Nutzer über den Button "Bearbe
 
 <br>
 
-## Prognoseseite
+## Prognose-Seite
 Diese Seite bietet dem Nutzer ein Überblick zur bestehenden Prognose einer ausgewählten Datenreihe. Des Weiteren können hier die dazugehörigen Parameter eingesehen und bei Bedarf angepasst werden.
 
 
-### Prognoseseite Basic
+### Prognose-Seite Basic
 ![Prognose Seite](./Data/Prognose%20Seite.gif)
 
 <br>
@@ -89,7 +89,7 @@ Diese Seite bietet dem Nutzer ein Überblick zur bestehenden Prognose einer ausg
 
 <br>
 
-## User Administration  
+## User Administration-Seite 
 Auf dieser Seite werden die verschiedenen Nutzer verwaltet. Nutzer können hinzugefügt oder gelöscht werden.
 ![Nutzer erstellen, löschen](./Data/Nutzer%20erstellen%20l%C3%B6schen.gif)
 
